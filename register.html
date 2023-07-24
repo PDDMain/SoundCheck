@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link href="css/register_style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+
+<body>
+
+<header>
+    <div class="logo"><img class="logo_pic" src="img/logo.jpg"> </div>
+    <input type="text" placeholder="Search" class="search">
+    <nav>
+        <ul>
+            <li><a href="#"><img class="icon" src="img/user_icon.jpg"></a></li>
+            <li><a href="#"><img class="icon" src="img/shopping_cart_icon.jpg"></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="register">
+        <h1>Register</h1>
+        <form action="authenticate.php" method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+
+            <label for="email">
+                <i class="fas fa-email"></i>
+            </label>
+            <input type="text" name="email" placeholder="Email" id="email" required>
+
+
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="submit" value="Add user">
+        </form>
+    </div>
+</main>
+</body>
+
+
+
+
+
+</html>
