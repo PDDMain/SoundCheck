@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main_style.css">
+</head>
+<body>
+<header>
+    <div class="logo"><img class="logo_pic" src="img/logo.jpg"> </div>
+    <input type="text" placeholder="Search" class="search">
+    <nav>
+        <ul>
+            <li><a href="#"><img class="icon" src="img/user_icon.jpg"></a></li>
+            <li><a href="#"><img class="icon" src="img/shopping_cart_icon.jpg"></a></li>
+        </ul>
+    </nav>
+</header>
+
+<aside class="filters">
+
+    <h1>Filters</h1>
+
+    <h2>Brands</h2>
+    <input type="checkbox" name="category" value="electronics"> Samsung
+    <br>
+    <input type="checkbox" name="category" value="clothing"> Apple
+    <br>
+    <input type="checkbox" name="category" value="home"> Xiaomi
+
+
+    <h2>Price</h2>
+    <label for="minPrice">From:</label>
+    <input type="number" name="minPrice" id="minPrice" min="0">
+    <br>
+    <label for="maxPrice">To:</label>
+    <input type="number" name="maxPrice" id="maxPrice" min="0">
+
+    <h2>Colors</h2>
+    <select name="brand">
+        <option value="">Select a color</option>
+        <option value="brand1">Black</option>
+        <option value="brand2">White</option>
+        <option value="brand3">Blue</option>
+        <!-- Add more brands as needed -->
+    </select>
+
+
+</aside>
+<main>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<div class="square">
+
+  <a href="#"><img class="product" src="img/product.jpg" alt=""></a>
+    <label class="name"> Good earphones</label>
+    <br>
+    <label class="price">199$</label>
+    <input type="submit" value="Buy" class="buy_button">
+</div>
+
+    <div class="square">
+
+        <a href="#"><img class="product" src="img/product.jpg" alt=""></a>
+        <label class="name"> Best earphones</label>
+        <br>
+         <label class="price">1999$</label>
+
+        <input type="submit" value="Buy" class="buy_button">
+    </div>
+    <div class="square">
+
+        <a href="#"><img class="product" src="img/product.jpg" alt=""></a>
+        <label class="name"> Not bad earphones</label>
+        <br>
+        <label class="price">19$</label>
+
+        <input type="submit" value="Buy" class="buy_button">
+    </div>
+    <div class="square">
+
+        <a href="#"><img class="product" src="img/product.jpg" alt=""></a>
+        <label class="name"> Very expensive earphones</label>
+        <br>
+        <label class="price">19999$</label>
+
+        <input type="submit" value="Buy" class="buy_button">
+    </div>
+
+
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
