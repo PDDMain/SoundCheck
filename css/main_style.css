@@ -6,14 +6,51 @@ body {
 
 .filters {
     background-color: white;
-    width: 18%;
-    height: 800px;
+    width: 16%;
+    /*height: 690px;*/
     float: left;
-    margin-left: 5%;
+    margin-left: 4%;
     margin-top: 183px;
-    padding: 20px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
     text-align: left;
     
+}
+.filters h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 34px;
+    padding: 0 0 2px 0;
+    /*border-bottom: 1px solid #dee0e4;*/
+}
+
+.filters h2 {
+    color: black;
+    font-size: 25px;
+    padding: 25px 0 0 0;
+    border-top: 1px solid #dee0e4;
+}
+
+.filters input[type="number"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.filters select {
+
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    /*margin-left: 10px;*/
+    /*background-color: black;*/
+    border: 0;
+    cursor: pointer;
+    /*color: #;*/
+    /*transition: background-color 0.2s;*/
+    /*border-radius: 10px;*/
+
 }
 
 main {
