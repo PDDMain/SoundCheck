@@ -45,7 +45,7 @@ if (isset($_POST['good_id']) && !empty($_POST['good_id'])) {
                 echo "$insert_query";
                 $stmt->execute();
 
-                header('Location: goods.php');
+                header('Location: main.php');
                 exit;
             }
             $stmt->close();
@@ -57,6 +57,6 @@ if (isset($_POST['good_id']) && !empty($_POST['good_id'])) {
 }
 
 // Redirect back to the goods.php page after adding to the basket
-header('Location: goods.php');
+header('Location: main.php');
 exit;
 ?>
