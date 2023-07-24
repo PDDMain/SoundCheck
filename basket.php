@@ -11,7 +11,7 @@ if (!isset($_SESSION['loggedin'])) {
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>List of Goods</title>
+    <title>My Basket</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body class="loggedin">
@@ -25,24 +25,6 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
 </nav>
 <div class="content">
-    <form action="goods.php" method="get">
-        <label for="category">Filter by Category:</label>
-        <select name="category" id="category">
-            <option value="">All Categories</option>
-            <option value="Electronics">Electronics</option>
-            <option value="Clothing">Clothing</option>
-            <option value="Books">Books</option>
-            <!-- Add more categories as needed -->
-        </select>
-        <input type="submit" value="Filter">
-    </form>
-
-    <form action="goods.php" method="get">
-        <label for="search">Search by Name:</label>
-        <input type="text" name="search" placeholder="Enter search keyword">
-        <input type="submit" value="Search">
-    </form>
-
     <?php
     // Database connection details
     $host = 'localhost';
@@ -59,28 +41,19 @@ if (!isset($_SESSION['loggedin'])) {
         exit();
     }
 
-    // Prepare the query with filtering based on category and searching based on name
-    $filter = "";
-    $search = "";
-    if (isset($_GET['category']) && !empty($_GET['category'])) {
-        $category = $mysqli->real_escape_string($_GET['category']);
-        $filter = "WHERE category = '$category'";
-    }
-    if (isset($_GET['search']) && !empty($_GET['search'])) {
-        $search = $mysqli->real_escape_string($_GET['search']);
-        if ($filter === "") {
-            $filter = "WHERE name LIKE '%$search%'";
-        } else {
-            $filter .= " AND name LIKE '%$search%'";
-        }
-    }
+    // Retrieve the user ID from the session
+    $user_id = $_SESSION['id'];
 
-    // Fetch the goods from the database with applied filtering and searching
-    $query = "SELECT id, name, description, image_link FROM goods $filter";
+    // Fetch the goods from the database that are in the user's basket
+    $query = "SELECT goods.id, goods.name, goods.description, goods.image_link FROM goods 
+              INNER JOIN basket ON goods.id = basket.good_id 
+              WHERE basket.user_id = $user_id";
+
     $result = $mysqli->query($query);
 
-    // Display the goods
+    // Display the goods in the basket
     if ($result->num_rows > 0) {
+        echo '<h2>My Basket</h2>';
         echo '<ul class="goods-list">';
         while ($row = $result->fetch_assoc()) {
             echo '<li class="goods-item">';
@@ -88,22 +61,17 @@ if (!isset($_SESSION['loggedin'])) {
             echo '<div>';
             echo '<h3 class="goods-name">' . $row['name'] . '</h3>';
             echo '<p>' . $row['description'] . '</p>';
-            echo '<form action="add_to_basket.php" method="post">';
-            echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
-            echo '<input type="submit" value="To Basket">';
-            echo '</form>';
             echo '</div>';
             echo '</li>';
         }
         echo '</ul>';
     } else {
-        echo 'No goods found.';
+        echo 'No goods in the basket.';
     }
 
     // Close the database connection
     $mysqli->close();
     ?>
-
 </div>
 </body>
 </html>
