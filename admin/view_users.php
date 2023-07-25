@@ -32,45 +32,53 @@ $result = $mysqli->query($sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View Users</title>
-    <!-- Add your CSS file link here -->
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="css/view_user.css">
 </head>
 <body>
 <header>
-    <h1>Admin Dashboard - View Users</h1>
-    <a href="admin_dashboard.php">Back to Dashboard</a>
     <a href="admin_logout.php">Logout</a>
 </header>
-
-<div class="user-list">
-    <h2>User List</h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>username	</th>
-            <th>Email</th>
-            <th>Action</th>
-        </tr>
-        <?php while ($row = $result->fetch_assoc()) { ?>
+<header>
+    <div><a href="../main.php"><img class="logo" src="../img/logo.jpg"></a></div>
+    <h2>Admin Dashboard</h2>
+    <nav>
+        <ul>
+            <li><a href="view_users.php">View Users</a></li>
+            <li><a href="add_product.php">Add New Product</a></li>
+            <li><a href="admin_logout.php">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="gap"></div>
+<div></div>
+<main>
+    <div class="user-list">
+        <h2>User List</h2>
+        <table>
             <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['username']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-                <td>
-                    <a href="delete_user.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
-                </td>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Action</th>
             </tr>
-        <?php } ?>
-    </table>
-</div>
-
-<footer>
-    <p>&copy; <?php echo date('Y'); ?> All rights reserved.</p>
+            <?php while ($row = $result->fetch_assoc()) { ?>
+                <tr>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['username']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td>
+                        <a href="delete_user.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </table>
+    </div>
+</main>
+<footer class="footer">
+    <!-- Footer content goes here -->
+    <p>&copy; 2023 All rights reserved.</p>
 </footer>
 </body>
 </html>
-
-<?php
-// Close the database connection
-$mysqli->close();
-?>
