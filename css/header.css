@@ -115,6 +115,7 @@ nav ul li a {
 .search-button:hover{
     background-color: #FF4386;
     border: 1px solid #FF4386;
+    cursor: pointer;
 }
 
 body{
