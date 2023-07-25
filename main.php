@@ -42,61 +42,59 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
 </header>
 <div class="container_aside">
-<aside class="filters">
-    <form action="main.php" method="get">
-    <h1>Filters</h1>
+    <aside class="filters">
+        <form action="main.php" method="get">
+            <h1>Filters</h1>
 
-    <h2>Brands</h2>
-    <input type="checkbox" name="category" value="Samsung"> Samsung
-    <br>
-    <input type="checkbox" name="category" value="Apple"> Apple
-    <br>
-    <input type="checkbox" name="category" value="Xiaomi"> Xiaomi
-    <br>
-    <input type="checkbox" name="category" value="JVC"> JVC
-    <br>
-    <input type="checkbox" name="category" value="Meze"> Meze
-    <br>
-    <input type="checkbox" name="category" value="Sennheiser"> Sennheiser
+            <h2>Brands</h2>
+            <input type="checkbox" name="category" value="Samsung"> Samsung
+            <br>
+            <input type="checkbox" name="category" value="Apple"> Apple
+            <br>
+            <input type="checkbox" name="category" value="Xiaomi"> Xiaomi
+            <br>
+            <input type="checkbox" name="category" value="JVC"> JVC
+            <br>
+            <input type="checkbox" name="category" value="Meze"> Meze
+            <br>
+            <input type="checkbox" name="category" value="Sennheiser"> Sennheiser
 
 
-    <h2>Price</h2>
-    <label for="minPrice">From:</label>
-    <input type="number" name="minPrice" id="minPrice" min="0">
-    <br>
-    <label for="maxPrice">To:</label>
-    <input type="number" name="maxPrice" id="maxPrice" min="0">
+            <h2>Price</h2>
+            <label for="minPrice">From:</label>
+            <input type="number" name="minPrice" id="minPrice" min="0">
+            <br>
+            <label for="maxPrice">To:</label>
+            <input type="number" name="maxPrice" id="maxPrice" min="0">
 
-    <h2>Colors</h2>
-    <select name="brand">
-        <option value="">Select a color</option>
-        <option value="Black">Black</option>
-        <option value="White">White</option>
-        <option value="Blue">Blue</option>
-        <!-- Add more brands as needed -->
-    </select>
-    <input type="submit" id="filter_button" value="Filter">
-    </form>
-</aside>
+            <h2>Colors</h2>
+            <select name="brand">
+                <option value="">Select a color</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Blue">Blue</option>
+                <!-- Add more brands as needed -->
+            </select>
+            <input type="submit" id="filter_button" value="Filter">
+        </form>
+    </aside>
 </div>
 <main>
 
-<!--    <div class="square">-->
-<!--        <form action="php/add_to_basket.php" method="post">-->
-<!--        <a href="https://www.google.com/"><img class="product" src="img/product.jpg" alt=""></a>-->
-<!--        <div class="name"> Very expensive earphones</div>-->
-<!--        <div class="price">-->
-<!--            <div class="price-text">1999$</div>-->
-
-<!--    <div class="change_amount">-->
-<!--        <button class="plus_button">+</button>-->
-<!--        <label class="amount_of_item">1</label>-->
-<!--       <button class="minus_button">-</button>-->
-<!--    </div>-->
-
-<!--        </div>-->
-<!--        </form>-->
-<!--    </div>-->
+    <!--    <div class="square">-->
+    <!--        <form action="php/add_to_basket.php" method="post">-->
+    <!--            <a href="https://www.google.com/"><img class="product" src="img/product.jpg" alt=""></a>-->
+    <!--            <div class="name"> Very expensive earphones</div>-->
+    <!--            <div class="price">-->
+    <!--                <div class="price-text">1999$</div>-->
+    <!--                <div class="change_amount">-->
+    <!--                    <button class="plus_button">+</button>-->
+    <!--                    <label class="amount_of_item">1</label>-->
+    <!--                    <button class="minus_button">-</button>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </form>-->
+    <!--    </div>-->
 
     <?php
     // Database connection details
@@ -161,15 +159,38 @@ if (!isset($_SESSION['loggedin'])) {
     // Display the goods
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
+            $user_id = $_SESSION['id'];
+            $query1 = 'SELECT basket.count FROM goods 
+              INNER JOIN basket ON goods.id = basket.good_id 
+              WHERE basket.user_id = ' . $user_id . ' AND basket.good_id = ' . $row['id'];
+            $result1 = $mysqli->query($query1);
+
             echo '<div class="square">';
-            echo '<form action="php/add_to_basket.php" method="post">';
+            if ($result1->num_rows === 0) {
+                echo '<form class="buy_button_form" action="php/add_to_basket.php" method="post">';
+            }
             echo '<a href=product_page.php?good_id="' . $row['id'] . '"><img class="product" src="' . $row['image_link'] . '" alt=""></a>';
             echo '<div class="name"> <a class="name" href=product_page.php?good_id="' . $row['id'] . '">' . $row['name'] . '</a></div>';
             echo '<div class="price">';
             echo '<div class="price-text">' . $row['price'] . '$</div>';
-            echo '<input type="submit" value="Buy" class="buy_button">';
+            if ($result1->num_rows > 0) {
+                $row1 = $result1->fetch_assoc();
+                echo '<form action="php/basket_inc.php" method="post" class="change_amount">';
+                echo '<input type="hidden" name="user_id" value="' . $user_id . '">';
+                echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
+                echo '<input type="hidden" name="return_page" value="main.php">';
+                echo '<button type="submit" name="action" value="increase" class="plus_button">+</button>';
+                echo '<label class="amount_of_item">' . $row1['count'] . '</label>';
+                echo '<button type="submit" name="action" value="decrease" class="minus_button">-</button>';
+                echo '</form>';
+            } else {
+                echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
+                echo '<input type="submit" value="Buy" class="buy_button">';
+            }
             echo '</div>';
-            echo '</form>';
+            if ($result1->num_rows === 0) {
+                echo '</form>';
+            }
             echo '</div>';
         }
         echo '</ul>';

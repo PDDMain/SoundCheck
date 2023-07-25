@@ -2,6 +2,7 @@
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check if the necessary data is sent via POST
+
     if (isset($_POST['user_id'], $_POST['good_id'], $_POST['action'])) {
         $user_id = $_POST['user_id'];
         $good_id = $_POST['good_id'];
