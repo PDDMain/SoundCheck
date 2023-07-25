@@ -15,10 +15,10 @@
 <header>
     <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
     <div class="search-container">
-        <div class="search">
-            <input type="text" placeholder="Search">
-            <button class="search-button">Search</button>
-        </div>
+        <form class="search" action="main.php" method="get">
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit" class="search-button">Search</button>
+        </form>
     </div>
     <nav>
         <ul>
