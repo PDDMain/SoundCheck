@@ -41,7 +41,7 @@ if (!isset($_SESSION['loggedin'])) {
         </ul>
     </nav>
 </header>
-
+<div class="container_aside">
 <aside class="filters">
     <form action="main.php" method="get">
     <h1>Filters</h1>
@@ -78,6 +78,7 @@ if (!isset($_SESSION['loggedin'])) {
     <input type="submit" id="filter_button" value="Filter">
     </form>
 </aside>
+</div>
 <main>
 
 <!--    <div class="square">-->

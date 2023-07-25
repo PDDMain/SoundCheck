@@ -3,7 +3,11 @@ body {
     background-size: cover;
     margin: 0;
 }
-
+.container_aside {
+    /*height: 1000px;*/
+    /*width: 16%;*/
+    /*background-color: brown;*/
+}
 .filters {
     background-color: white;
     width: 16%;
@@ -69,7 +73,6 @@ body {
     color: #fff;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
 }
 .filters input[type="submit"], #filter_button:hover {
     background-color: #FF4386;
@@ -80,21 +83,25 @@ main {
     /*background-image: url("img/background-default.jpg");*/
     /*background-size: cover;*/
     margin-top: 150px;
+    margin-left: 300px;
+    /*background-color: cornflowerblue;*/
 
 }
 
 .product {
     width: 200px;
     height: 200px;
-    margin-top: 5%;
+    margin-top: 6%;
     margin-bottom: 5%;
+    object-fit: contain;
+
 }
 
 .square {
     display: inline-table;
-    width: 20%;
+    width: 27%;
     background-color: white;
-    margin-left: 4%;
+    margin-left: 5%;
     margin-bottom: 67px;
     text-align: center;
     /*float: left;*/
