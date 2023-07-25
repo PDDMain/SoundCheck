@@ -1,0 +1,102 @@
+header {
+    position: fixed;
+    width: 90%;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5% 20px 5%;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.user-hover {
+    position: absolute;
+    width: 45px;
+    opacity: 0;
+}
+
+.user-hover:hover {
+    opacity: 1;
+}
+
+.user {
+    opacity: 1;
+    /*position: absolute;*/
+    width: 45px;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.cart-hover {
+    position: absolute;
+    width: 45px;
+    opacity: 0;
+}
+
+.cart-hover:hover {
+    opacity: 1;
+}
+
+.cart{
+    /*position: absolute;*/
+    width: 45px;
+}
+
+.search-container {
+    padding-left: 5%;
+    flex: 100%;
+    display: flex;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    position: absolute;
+    width: 40%;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #333;
+}
