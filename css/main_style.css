@@ -1,0 +1,143 @@
+body {
+    background: url("../img/background-default.jpg") no-repeat fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.filters {
+    background-color: white;
+    width: 16%;
+    /*height: 690px;*/
+    float: left;
+    margin-left: 4%;
+    /*margin-top: 183px;*/
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+    
+}
+.filters h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 34px;
+    padding: 0 0 2px 0;
+    /*border-bottom: 1px solid #dee0e4;*/
+}
+
+.filters h2 {
+    color: black;
+    font-size: 25px;
+    padding: 25px 0 0 0;
+    border-top: 1px solid #dee0e4;
+}
+
+.filters input[type="number"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.filters select {
+
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    /*margin-left: 10px;*/
+    /*background-color: black;*/
+    border: 0;
+    cursor: pointer;
+    /*color: #;*/
+    /*transition: background-color 0.2s;*/
+    /*border-radius: 10px;*/
+
+}
+
+.filters input[type="submit"], #filter_button {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    margin-top: 35px;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    /*border-radius: 10px;*/
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+.filters input[type="submit"], #filter_button:hover {
+    background-color: #FF4386;
+
+}
+
+main {
+    /*background-image: url("img/background-default.jpg");*/
+    /*background-size: cover;*/
+    margin-top: 150px;
+
+}
+
+.product {
+    width: 90%;
+    height: 200px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.square {
+    display: inline-table;
+    width: 20%;
+    background-color: white;
+    margin-left: 4%;
+    margin-bottom: 67px;
+    text-align: center;
+    /*float: left;*/
+}
+
+
+
+ .buy_button{
+    width:50%;
+    /*margin-right: 5%;*/
+    /*padding: 20px 10%;*/
+    padding: 10px;
+    margin: 10px;
+    float: right;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.buy_button:hover{
+    background-color: #FF4386;
+}
+
+.price{
+    padding-left: 16px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.price-text{
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    /*font-weight: 700;*/
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.name {
+    font-size: 22px;
+    margin: 10px;
+    font-weight: 500;
+}

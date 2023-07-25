@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+body {
+    background: url("../img/background-default.jpg") no-repeat fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.buy {
+    background-color: white;
+    width: 18%;
+    height: 700px;
+    float: right;
+    right: 5%;
+    margin-top: 8%;
+    margin-right: 4%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: left;
+}
+
+main {
+    /*background-image: url("img/background-default.jpg");*/
+    background-size: cover;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    color: #fff;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    /*text-align: left;*/
+    /*padding-right: 1%;*/
+    padding-left: 5%;
+}
+
+footer {
+
+    width: 100%;
+    /*height: 70px;*/
+    background-color: black;
+
+    /*position: fixed;*/
+    /*bottom: 0;*/
+
+}
+nav {
+    float: right;
+    display: inline-block;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding-right: 100px;
+    justify-content: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.gap{
+    height: 200px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sale {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.icon{
+    width: 40px;
+}
+
+.product {
+    width: 23%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.logo{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+.logo_pic{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+}
+
+.item {
+    display: inline-block;
+    width: 50%;
+    height: 230px;
+    background-color: white;
+    margin-left: 7%;
+    margin-top: 4%;
+    float: left;
+}
+.buy input[type="submit"] {
+    width: 100%;
+    /*height: 60px;*/
+    padding: 15px;
+    /*margin-top: 20px;*/
+    background-color: black;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    /*transition: background-color 0.2s;*/
+}
+
+
+.buy input[type="submit"]:hover {
+    background-color: grey;
+    transition: background-color 0.2s;
+}
+.search {
+    display: inline-block;
+    position: absolute;
+    outline: none;
+    width:50%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #333;
+}

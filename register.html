@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link href="css/register_style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" rel="stylesheet" href="css/header.css">
+</head>
+
+
+
+
+<body>
+
+<header>
+    <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+    <div class="search-container">
+        <form class="search" action="main.php" method="get">
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">
+                <div class="user-container">
+                    <img class="user" src="img/user_icon.jpg">
+                    <img class="user-hover" src="img/user_icon_hover.jpg">
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="cart-container">
+                    <img class="cart" src="img/shopping_cart_icon.jpg">
+                    <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
+                </div>
+            </a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="register">
+        <h1>Register</h1>
+        <form action="php/register.php" method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+
+            <label for="email">
+                <i class="fas fa-email"></i>
+            </label>
+            <input type="text" name="email" placeholder="Email" id="email" required>
+
+
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="submit" value="Add user">
+        </form>
+    </div>
+</main>
+</body>
+
+
+
+
+
+</html>
