@@ -139,10 +139,13 @@ main {
     margin-right: 5%;
 }
 .name {
+    text-decoration: none;
+    color: black;
     font-size: 22px;
     margin: 10px;
     font-weight: 500;
 }
+
 
 .name:hover {
     color: #FF4386;
