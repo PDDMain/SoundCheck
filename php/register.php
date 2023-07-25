@@ -33,7 +33,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $stmt->bind_param('sss', $_POST['username'], $_POST['password'], $_POST['email']);
             $stmt->execute();
             // Registration successful, you can redirect to the login page or display a success message
-            header('Location: login.html');
+            header('Location: ../login.html');
             exit;
         } else {
             echo 'Registration failed. Please try again later.';
