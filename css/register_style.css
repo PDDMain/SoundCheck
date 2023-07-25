@@ -130,27 +130,7 @@ main {
 
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background-color: black;
-    color: #fff;
-    padding-top: 2%;
-    padding-bottom: 1%;
-    /*text-align: left;*/
-    /*padding-right: 1%;*/
-    padding-left: 5%;
-}
 
-footer {
-
-    width: 100%;
-    background-color: black;
-
-}
 
 nav {
     float: right;
@@ -170,41 +150,13 @@ nav ul li {
     margin: 0 10px;
 }
 
-.gap {
-    height: 200px;
-}
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
 
-.sale {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.icon {
-    width: 40px;
-}
 
 .product {
     width: 90%;
     margin-top: 5%;
     margin-bottom: 5%;
-}
-
-.logo {
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-}
-
-.logo_pic {
-    padding: 0;
-    margin: 0;
-    height: 50px;
 }
 
 .square {
@@ -216,17 +168,4 @@ nav ul li a {
     margin-top: 10%;
     text-align: center;
     float: left;
-}
-
-.search {
-    display: inline-block;
-    position: absolute;
-    outline: none;
-    width: 50%;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 8px;
-    font-size: 16px;
-    background-color: #f0f0f0;
-    color: #333;
 }
