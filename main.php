@@ -19,10 +19,10 @@ if (!isset($_SESSION['loggedin'])) {
 <header>
     <div><img class="logo" src="img/logo.jpg"></div>
     <div class="search-container">
-        <div class="search">
-            <input type="text" placeholder="Search">
-            <button class="search-button">Search</button>
-        </div>
+        <form class="search" action="main.php" method="get">
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit" class="search-button">Search</button>
+        </form>
     </div>
     <nav>
         <ul>
@@ -52,6 +52,12 @@ if (!isset($_SESSION['loggedin'])) {
     <input type="checkbox" name="category" value="Apple"> Apple
     <br>
     <input type="checkbox" name="category" value="Xiaomi"> Xiaomi
+    <br>
+    <input type="checkbox" name="category" value="JVC"> JVC
+    <br>
+    <input type="checkbox" name="category" value="Meze"> Meze
+    <br>
+    <input type="checkbox" name="category" value="Sennheiser"> Sennheiser
 
 
     <h2>Price</h2>
@@ -64,9 +70,9 @@ if (!isset($_SESSION['loggedin'])) {
     <h2>Colors</h2>
     <select name="brand">
         <option value="">Select a color</option>
-        <option value="brand1">Black</option>
-        <option value="brand2">White</option>
-        <option value="brand3">Blue</option>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+        <option value="Blue">Blue</option>
         <!-- Add more brands as needed -->
     </select>
     <input type="submit" id="filter_button" value="Filter">
@@ -137,6 +143,30 @@ if (!isset($_SESSION['loggedin'])) {
     if (isset($_GET['category']) && !empty($_GET['category'])) {
         $category = $mysqli->real_escape_string($_GET['category']);
         $filter = "WHERE category = '$category'";
+    }
+    if (isset($_GET['brand']) && !empty($_GET['brand'])) {
+        $color = $mysqli->real_escape_string($_GET['brand']);
+        if ($filter === "") {
+            $filter = "WHERE color = '$color'";
+        } else {
+            $filter .= "AND color = '$color'";
+        }
+    }
+    if (isset($_GET['minPrice']) && !empty($_GET['minPrice'])) {
+        $minPrice = $mysqli->real_escape_string($_GET['minPrice']);
+        if ($filter === "") {
+            $filter = "WHERE price >= '$minPrice'";
+        } else {
+            $filter .= "AND price >= '$minPrice'";
+        }
+    }
+    if (isset($_GET['maxPrice']) && !empty($_GET['maxPrice'])) {
+        $maxPrice = $mysqli->real_escape_string($_GET['maxPrice']);
+        if ($filter === "") {
+            $filter = "WHERE price <= '$maxPrice'";
+        } else {
+            $filter .= "AND price <= '$maxPrice'";
+        }
     }
     if (isset($_GET['search']) && !empty($_GET['search'])) {
         $search = $mysqli->real_escape_string($_GET['search']);
