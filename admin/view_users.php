@@ -33,7 +33,7 @@ $result = $mysqli->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/view_user.css">
 </head>
 <body>
@@ -42,7 +42,7 @@ $result = $mysqli->query($sql);
 </header>
 <header>
     <div><a href="../main.php"><img class="logo" src="../img/logo.jpg"></a></div>
-    <h2>Admin Dashboard</h2>
+    <a class="header-link-style" href="admin_dashboard.php"><h2>Admin Dashboard</h2></a>
     <nav>
         <ul>
             <li><a href="view_users.php">View Users</a></li>
