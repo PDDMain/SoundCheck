@@ -53,7 +53,7 @@ if (!isset($_SESSION['loggedin'])) {
         <option value="brand3">Blue</option>
         <!-- Add more brands as needed -->
     </select>
-    <input type="submit" value="Filter">
+    <input type="submit" id="filter_button" value="Filter">
     </form>
 </aside>
 <main>
