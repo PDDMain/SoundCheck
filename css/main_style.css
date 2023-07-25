@@ -99,7 +99,9 @@ main {
     /*float: left;*/
 }
 
-.buy_button {
+
+
+ .buy_button{
     width:50%;
     /*margin-right: 5%;*/
     /*padding: 20px 10%;*/
@@ -118,10 +120,24 @@ main {
     background-color: #FF4386;
 }
 
-
-.price {
-
+.price{
+    padding-left: 16px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
+.price-text{
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    /*font-weight: 700;*/
+    margin-left: 5%;
+    margin-right: 5%;
+}
 .name {
+    font-size: 22px;
+    margin: 10px;
+    font-weight: 500;
 }
