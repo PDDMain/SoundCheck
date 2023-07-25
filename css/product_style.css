@@ -43,6 +43,7 @@ main {
     display: flex;
     align-items: center;
     font-size: 50px;
+    font-weight: 700;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -95,5 +96,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+hr {
+    border: 0;
+    border-top: 2px solid #ccc;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
