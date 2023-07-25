@@ -65,10 +65,11 @@ body {
     /*border-radius: 10px;*/
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
-    background-color: #555;
+    background-color: black;
     color: #fff;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 .filters input[type="submit"], #filter_button:hover {
     background-color: #FF4386;
@@ -83,7 +84,7 @@ main {
 }
 
 .product {
-    width: 90%;
+    width: 200px;
     height: 200px;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -110,7 +111,7 @@ main {
     float: right;
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
-    background-color: #555;
+    background-color: black;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -118,6 +119,7 @@ main {
 
 .buy_button:hover{
     background-color: #FF4386;
+    cursor: pointer;
 }
 
 .price{
@@ -140,4 +142,10 @@ main {
     font-size: 22px;
     margin: 10px;
     font-weight: 500;
+}
+
+.name:hover {
+    color: #FF4386;
+    cursor: pointer;
+
 }
