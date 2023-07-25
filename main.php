@@ -81,42 +81,15 @@ if (!isset($_SESSION['loggedin'])) {
 <main>
 
 <!--    <div class="square">-->
-<!---->
-<!--        <a href="#"><img class="product" src="img/product.jpg" alt=""></a>-->
-<!--        <label class="name"> Good earphones</label>-->
-<!--        <br>-->
-<!--        <label class="price">199$</label>-->
-<!--        <input type="submit" value="Buy" class="buy_button">-->
+<!--        <form action="php/add_to_basket.php" method="post">-->
+<!--        <a href="https://www.google.com/"><img class="product" src="img/product.jpg" alt=""></a>-->
+<!--        <div class="name"> Very expensive earphones</div>-->
+<!--        <div class="price">-->
+<!--            <div class="price-text">1999$</div>-->
+<!--                <input type="submit" value="Buy" class="buy_button">-->
+<!--        </div>-->
+<!--        </form>-->
 <!--    </div>-->
-<!---->
-<!--    <div class="square">-->
-<!---->
-<!--        <a href="#"><img class="product" src="img/product.jpg" alt=""></a>-->
-<!--        <label class="name"> Best earphones</label>-->
-<!--        <br>-->
-<!--        <label class="price">1999$</label>-->
-<!---->
-<!--        <input type="submit" value="Buy" class="buy_button">-->
-<!--    </div>-->
-<!--    <div class="square">-->
-<!---->
-<!--        <a href="#"><img class="product" src="img/product.jpg" alt=""></a>-->
-<!--        <label class="name"> Not bad earphones</label>-->
-<!--        <br>-->
-<!--        <label class="price">19$</label>-->
-<!---->
-<!--        <input type="submit" value="Buy" class="buy_button">-->
-<!--    </div>-->
-    <div class="square">
-        <form action="php/add_to_basket.php" method="post">
-        <a href="https://www.google.com/"><img class="product" src="img/product.jpg" alt=""></a>
-        <div class="name"> Very expensive earphones</div>
-        <div class="price">
-            <div class="price-text">1999$</div>
-                <input type="submit" value="Buy" class="buy_button">
-        </div>
-        </form>
-    </div>
 
     <?php
     // Database connection details
