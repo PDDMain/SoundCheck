@@ -87,7 +87,13 @@ if (!isset($_SESSION['loggedin'])) {
 <!--        <div class="name"> Very expensive earphones</div>-->
 <!--        <div class="price">-->
 <!--            <div class="price-text">1999$</div>-->
-<!--                <input type="submit" value="Buy" class="buy_button">-->
+
+<!--    <div class="change_amount">-->
+<!--        <button class="plus_button">+</button>-->
+<!--        <label class="amount_of_item">1</label>-->
+<!--       <button class="minus_button">-</button>-->
+<!--    </div>-->
+
 <!--        </div>-->
 <!--        </form>-->
 <!--    </div>-->
