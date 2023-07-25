@@ -10,22 +10,39 @@ if (!isset($_SESSION['loggedin'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>My Basket</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Basket</title>
+    <link rel="stylesheet" href="css/basket_style.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
-<body class="loggedin">
-<nav class="navtop">
-    <div>
-        <a class="title"><h1>Website Title</h1></a>
-        <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-        <a href="php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-        <a href="basket.php"><i class="fas fa-shopping-basket"></i>Basket</a>
+<body>
+<header>
+    <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+    <div class="search-container">
+        <form class="search" action="main.php" method="get">
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit" class="search-button">Search</button>
+        </form>
     </div>
-</nav>
-<div class="content">
+    <nav>
+        <ul>
+            <li><a href="profile.php">
+                    <div class="user-container">
+                        <img class="user" src="img/user_icon.jpg">
+                        <img class="user-hover" src="img/user_icon_hover.jpg">
+                    </div>
+                </a></li>
+            <li><a href="basket.php">
+                    <div class="cart-container">
+                        <img class="cart" src="img/shopping_cart_icon.jpg">
+                        <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
+                    </div>
+                </a></li>
+        </ul>
+    </nav>
+</header>
+<aside class="buy">
     <?php
-    // Database connection details
     $host = 'localhost';
     $username = 'root';
     $password = 'root';
@@ -42,9 +59,30 @@ if (!isset($_SESSION['loggedin'])) {
 
     // Retrieve the user ID from the session
     $user_id = $_SESSION['id'];
+    $query1 = "SELECT goods.price, basket.count FROM goods 
+              INNER JOIN basket ON goods.id = basket.good_id 
+              WHERE basket.user_id = $user_id";
+
+    $result1 = $mysqli->query($query1);
+    $items = 0;
+    $price = 0;
+    if ($result1->num_rows > 0) {
+        while ($row = $result1->fetch_assoc()) {
+            $items = $items + $row['count'];
+            $price = $price + ($row['price'] * $row['count']);
+        }
+    }
+    echo '<p>Total (' . $items . ' items): <label class="all_price">' . $price . '$</label> </p>'
+    ?>
+    <input type="submit" value="Order">
+</aside>
+
+<main>
+    <?php
+    // Database connection details
 
     // Fetch the goods from the database that are in the user's basket
-    $query = "SELECT goods.id, goods.name, goods.description, goods.image_link FROM goods 
+    $query = "SELECT goods.id, goods.name, goods.price, goods.description, goods.image_link, basket.count FROM goods 
               INNER JOIN basket ON goods.id = basket.good_id 
               WHERE basket.user_id = $user_id";
 
@@ -52,25 +90,40 @@ if (!isset($_SESSION['loggedin'])) {
 
     // Display the goods in the basket
     if ($result->num_rows > 0) {
-        echo '<h2>My Basket</h2>';
-        echo '<ul class="goods-list">';
         while ($row = $result->fetch_assoc()) {
-            echo '<li class="goods-item">';
-            echo '<img src="' . $row['image_link'] . '" alt="Goods Image" class="goods-image">';
-            echo '<div>';
-            echo '<h3 class="goods-name">' . $row['name'] . '</h3>';
-            echo '<p>' . $row['description'] . '</p>';
+            echo '<div class="item">';
+            echo '<div class="left_item">';
+            echo '<a href=product_page.php?good_id="' . $row['id'] . '"><img class="product" src="' . $row['image_link'] . '" alt=""></a>';
             echo '</div>';
-            echo '</li>';
+            echo '<div class="right_item">';
+            echo '<form action="php/basket_delete.php" method="post" class="top_right_item">';
+            echo '<label class="name">' . $row['name'] . '</label>';
+            echo '<input type="hidden" name="user_id" value="' . $user_id . '">';
+            echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
+            echo '<button class="delete_button">Remove</button>';
+            echo '</form>';
+            echo '<form action="php/basket_inc.php" method="post" class="bottom_right_item">';
+            echo '<input type="hidden" name="user_id" value="' . $user_id . '">';
+            echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
+            echo '<input type="hidden" name="return_page" value="basket.php">';
+            echo '<label class="price_of_item">' . $row['price'] . '$</label>';
+            echo '<button type="submit" name="action" value="increase" class="plus_button">+</button>';
+            echo '<label class="amount_of_item">' . $row['count'] . '</label>';
+            echo '<button type="submit" name="action" value="decrease" class="minus_button">-</button>';
+            echo '</form>';
+            echo '</div>';
+            echo '</div>';
         }
-        echo '</ul>';
-    } else {
-        echo 'No goods in the basket.';
     }
 
     // Close the database connection
     $mysqli->close();
     ?>
-</div>
+
+
+</main>
+<footer>
+
+</footer>
 </body>
 </html>

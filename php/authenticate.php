@@ -9,12 +9,22 @@ $DATABASE_NAME = 'example';
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
     // If there is an error with the connection, stop the script and display the error.
+    $error_message = "Unknown error!"; // Set your custom error message here.
+    $encoded_message = urlencode($error_message); // URL-encode the error message to handle special characters.
+
+    // Redirect the user to the error page with the error message as a query parameter.
+    header("Location: ../error_page.php?message=$encoded_message");
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if (!isset($_POST['username'], $_POST['password'])) {
     // Could not get the data that should have been sent.
-    exit('Please fill both the username and password fields!');
+    $error_message = "Please fill both the username and password fields!"; // Set your custom error message here.
+    $encoded_message = urlencode($error_message); // URL-encode the error message to handle special characters.
+
+    // Redirect the user to the error page with the error message as a query parameter.
+    header("Location: ../error_page.php?message=$encoded_message");
+    exit;
 }
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
@@ -40,11 +50,19 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             header('Location: ../main.php');
         } else {
             // Incorrect password
-            echo 'Incorrect username and/or password!';
+            $error_message = "Incorrect username and/or password!"; // Set your custom error message here.
+            $encoded_message = urlencode($error_message); // URL-encode the error message to handle special characters.
+
+            // Redirect the user to the error page with the error message as a query parameter.
+            header("Location: ../error_page.php?message=$encoded_message");
         }
     } else {
         // Incorrect username
-        echo 'Incorrect username and/or password!';
+        $error_message = "Incorrect username and/or password!"; // Set your custom error message here.
+        $encoded_message = urlencode($error_message); // URL-encode the error message to handle special characters.
+
+        // Redirect the user to the error page with the error message as a query parameter.
+        header("Location: ../error_page.php?message=$encoded_message");
     }
 
 
