@@ -159,3 +159,61 @@ main {
     cursor: pointer;
 
 }
+
+
+
+.plus_button {
+    width: 40px;
+    float: right;
+    padding: 8px;
+    height: 40px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+
+}
+.plus_button:hover {
+    cursor: pointer;
+    background-color: #FF4386;
+    transition: background-color 0.2s;
+}
+.amount_of_item {
+    text-align: center;
+    font-size: 20px;
+    height: 24px;
+    width: 24px;
+    float: right;
+    padding: 8px;
+}
+
+.minus_button {
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding: 8px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    border-top-left-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+
+.minus_button:hover {
+    cursor: pointer;
+    background-color: #FF4386;
+    transition: background-color 0.2s;
+}
+
+
+
+.change_amount {
+    width:50%;
+    /*margin-right: 5%;*/
+    /*padding: 20px 10%;*/
+    margin: 10px;
+    float: right;
+    /*background-color: #5b6574;*/
+}
