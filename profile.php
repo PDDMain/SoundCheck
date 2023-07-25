@@ -34,10 +34,10 @@ $stmt->close();
 <body class="loggedin">
 <nav class="navtop">
     <div>
-        <a href="home.php" class="title"><h1>Website Title</h1></a>
+        <a class="title"><h1>Website Title</h1></a>
         <a href="goods.php"><i class="fas fa-user-circle"></i>Goods</a>
         <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        <a href="php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
 </nav>
 <div class="content">

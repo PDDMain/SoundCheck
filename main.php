@@ -13,15 +13,31 @@ if (!isset($_SESSION['loggedin'])) {
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" rel="stylesheet" href="css/header.css">
 </head>
 <body>
 <header>
-    <div class="logo"><img class="logo_pic" src="img/logo.jpg"> </div>
-    <input type="text" placeholder="Search" class="search">
+    <div><img class="logo" src="img/logo.jpg"></div>
+    <div class="search-container">
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
     <nav>
         <ul>
-            <li><a href="#"><img class="icon" src="img/user_icon.jpg"></a></li>
-            <li><a href="#"><img class="icon" src="img/shopping_cart_icon.jpg"></a></li>
+            <li><a href="#">
+                    <div class="user-container">
+                        <img class="user" src="img/user_icon.jpg">
+                        <img class="user-hover" src="img/user_icon_hover.jpg">
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <div class="cart-container">
+                        <img class="cart" src="img/shopping_cart_icon.jpg">
+                        <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
+                    </div>
+                </a></li>
         </ul>
     </nav>
 </header>
@@ -143,7 +159,7 @@ if (!isset($_SESSION['loggedin'])) {
             echo '<label class="name"> ' . $row['name'] . '</label>';
             echo '<br>';
             echo '<label class="price">' . $row['price'] . '$</label>';
-            echo '<form action="add_to_basket.php" method="post">';
+            echo '<form action="php/add_to_basket.php" method="post">';
             echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
             echo '<input type="submit" value="Buy" class="buy_button">';
             echo '</form>';

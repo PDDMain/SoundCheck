@@ -132,26 +132,6 @@ main {
 
 
 
-nav {
-    float: right;
-    display: inline-block;
-}
-
-nav ul {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding-right: 100px;
-    justify-content: right;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-
-
 
 .product {
     width: 90%;
