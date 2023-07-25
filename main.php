@@ -17,7 +17,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 <body>
 <header>
-    <div><img class="logo" src="img/logo.jpg"></div>
+    <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
     <div class="search-container">
         <form class="search" action="main.php" method="get">
             <input type="text" name="search" placeholder="Search">
@@ -154,17 +154,6 @@ if (!isset($_SESSION['loggedin'])) {
     // Display the goods
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-//            echo '<div class="square">';
-//            echo '<a href="#"><img class="product" src="' . $row['image_link'] . '" alt=""></a>';
-//            echo '<label class="name"> ' . $row['name'] . '</label>';
-//            echo '<br>';
-//            echo '<label class="price">' . $row['price'] . '$</label>';
-//            echo '<form action="php/add_to_basket.php" method="post">';
-//            echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
-//            echo '<input type="submit" value="Buy" class="buy_button">';
-//            echo '</form>';
-//            echo '</div>';
-
             echo '<div class="square">';
             echo '<form action="php/add_to_basket.php" method="post">';
             echo '<a href=product_page.php?good_id="' . $row['id'] . '"><img class="product" src="' . $row['image_link'] . '" alt=""></a>';
