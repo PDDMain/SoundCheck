@@ -71,6 +71,25 @@ main {
     background-color: #FF4386;
 }
 
+.logout {
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.logout:hover{
+    background-color: #FF4386;
+}
+
 .orders-title{
     background-color: white;
     font-size: 30px;
