@@ -65,7 +65,7 @@ main {
     justify-content: center;
     align-items: center;
     width:100%;
-    margin-right: 10px;
+    margin-left: 10px;
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 20px 0;
@@ -85,11 +85,6 @@ main {
     /* Add padding at the bottom to make space for the fixed footer */
     padding-bottom: 60px; /* Adjust the value as per your footer height */
 }
-hr {
-    border: 0;
-    border-top: 2px solid #ccc;
-    margin: 0;
-}
 
 .bill-info{
     /*margin: 20px;*/
@@ -105,6 +100,7 @@ hr {
 }
 
 .total{
+    padding: 10px;
     min-width: max-content;
     width: 15%;
     font-size: 20px;
@@ -118,7 +114,7 @@ hr {
     width: 15%;
     font-size: 25px;
     font-weight: bold;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
 }
 
 .order-num{
@@ -127,10 +123,11 @@ hr {
     width: 15%;
     font-size: 20px;
     font-weight: bold;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
 }
 
 .order-id{
+    padding: 10px;
     min-width: max-content;
     width: 15%;
     font-size: 20px;

@@ -49,21 +49,6 @@ body {
     width: 90%;
 }
 
-.filters select {
-
-    width: 90%;
-    height: 40px;
-    padding: 10px;
-    /*margin-left: 10px;*/
-    /*background-color: black;*/
-    border: 0;
-    cursor: pointer;
-    /*color: #;*/
-    /*transition: background-color 0.2s;*/
-    /*border-radius: 10px;*/
-
-}
-
 .filters input[type="submit"], #filter_button {
     width: 100%;
     height: 50px;
@@ -278,10 +263,17 @@ input[type='checkbox']:checked:after {
     color:white;
 }
 
-/*.selector{*/
-/*    !*box-shadow: none;*!*/
-/*    width: 100%;*/
-/*    background-color: white;*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 10px;*/
-/*}*/
+.selector{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
