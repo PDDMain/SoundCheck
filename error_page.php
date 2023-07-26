@@ -12,6 +12,7 @@
 </head>
 <body>
 <header>
+    <div class="header-navigation">
     <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
     <div class="search-container">
         <form class="search" action="main.php" method="get">
@@ -35,9 +36,10 @@
                 </a></li>
         </ul>
     </nav>
+    </div>
 </header>
-<div class="gap"></div>
-<div></div>
+<!--<div class="gap"></div>-->
+<!--<div></div>-->
 <main>
     <p class="error_message">
         <?php

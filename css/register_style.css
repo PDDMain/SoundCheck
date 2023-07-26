@@ -8,8 +8,8 @@
     width: 500px;
     background-color: #ffffff;
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
-    margin: 200px auto 50px auto;
-    border-radius: 10px;
+    margin: 170px auto 50px auto;
+    border-radius: 12px;
 }
 
 .register h1 {
@@ -34,6 +34,8 @@
     align-items: center;
     width: 55px;
     height: 55px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
     background-color: black;
     color: #ffffff;
 }
@@ -44,6 +46,8 @@
     border: 1px solid #dee0e4;
     margin-bottom: 40px;
     padding: 0 15px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .register form input[type="submit"] {
@@ -57,8 +61,8 @@
     font-weight: bold;
     color: #ffffff;
     transition: background-color 0.2s;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .register form input[type="submit"]:hover {
