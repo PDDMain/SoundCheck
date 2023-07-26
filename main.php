@@ -60,6 +60,7 @@ if (!isset($_SESSION['loggedin'])) {
 
             <h2>Brands</h2>
             <input class="filters_checkbox" type="checkbox" name="category" value="Samsung"> Samsung
+            <span class="filters_checkmark"></span>
             <br>
             <input class="filters_checkbox" type="checkbox" name="category" value="Apple"> Apple
             <br>
@@ -74,13 +75,13 @@ if (!isset($_SESSION['loggedin'])) {
 
             <h2>Price</h2>
             <label for="minPrice">From:</label>
-            <input type="number" name="minPrice" id="minPrice" min="0">
+            <input class="filters_price" type="number" name="minPrice" id="minPrice" min="0">
             <br>
             <label for="maxPrice">To:</label>
-            <input type="number" name="maxPrice" id="maxPrice" min="0">
+            <input class="filters_price" type="number" name="maxPrice" id="maxPrice" min="0">
 
             <h2>Colors</h2>
-            <select name="brand">
+            <select class="selector" name="brand">
                 <option value="">Select a color</option>
                 <option value="Black">Black</option>
                 <option value="White">White</option>

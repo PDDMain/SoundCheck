@@ -46,8 +46,6 @@
         <a class="cath" href="#">Wireless</a>
     </div>
 </header>
-<div class="gap"></div>
-<div></div>
 <main>
     <!-- Product details section -->
     <?php
@@ -79,7 +77,8 @@
             echo '<div class="image_n_price">';
             echo '<div class="img_n_prc">';
             echo '<img src="' . $row['image_link'] . '" alt="Product Name">';
-            echo '<hr>';
+//             echo '<div class="price-label">Price</div>';
+//             echo '<hr>';
             echo '<div class="price">';
             echo '<div class="price-text">' . $row['price'] . '$</div>';
             echo '<button class="add-to-cart">Add to Cart</button>';
@@ -90,7 +89,7 @@
             echo '<div class="prof_inf">';
             echo '<h1 class="product-name">' . $row['name'] . '</h1>';
             echo '<hr>';
-            echo '<p class="product-description">Description</p>';
+            echo '<h3 class="product-description">Description</h3>';
             echo '<p class="product-description">';
             echo $row['description'];
             echo '</p>';
