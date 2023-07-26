@@ -69,6 +69,7 @@ main {
 
 .edit:hover{
     background-color: #FF4386;
+    cursor: pointer;
 }
 
 .logout {
@@ -88,6 +89,7 @@ main {
 
 .logout:hover{
     background-color: #FF4386;
+    cursor: pointer;
 }
 
 .orders-title{
