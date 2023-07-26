@@ -54,7 +54,7 @@ $result = $mysqli->query($sql);
 <div></div>
 <main>
     <div class="user-list">
-        <h2>User List</h2>
+        <h2>Review List</h2>
         <table>
             <tr>
                 <th>ID</th>
