@@ -99,7 +99,7 @@ function addZeros($number) {
         <div class="order-info">
             <div class="ord-inf">
                 <!--                <hr>-->
-                <form action="/php/add_order.php" method="post">
+                <form action="php/add_order.php" method="post">
                     <h2>Order Form</h2>
                     <h3>Personal information:</h3>
                     <label class="information-title" for="full_name">Name:</label>
