@@ -68,7 +68,7 @@
     if (isset($_GET['good_id']) && !empty($_GET['good_id'])) {
         $good_id = $_GET['good_id'];
         // Fetch the goal details from the database
-        $query = "SELECT id, name, price, description, image_link FROM goods WHERE id = $good_id";
+        $query = "SELECT id, name, price, description, image_link, color, category FROM goods WHERE id = $good_id";
         $result = $mysqli->query($query);
 
         if ($result->num_rows > 0) {
@@ -77,8 +77,6 @@
             echo '<div class="image_n_price">';
             echo '<div class="img_n_prc">';
             echo '<img src="' . $row['image_link'] . '" alt="Product Name">';
-//             echo '<div class="price-label">Price</div>';
-//             echo '<hr>';
             echo '<div class="price">';
             echo '<div class="price-text">' . $row['price'] . '$</div>';
             echo '<button class="add-to-cart">Add to Cart</button>';
@@ -89,6 +87,14 @@
             echo '<div class="prof_inf">';
             echo '<h1 class="product-name">' . $row['name'] . '</h1>';
             echo '<hr>';
+            echo '<h3 class="product-description">Brand</h3>';
+            echo '<p class="product-description">';
+            echo $row['category'];
+            echo '</p>';
+            echo '<h3 class="product-description">Color</h3>';
+            echo '<p class="product-description">';
+            echo $row['color'];
+            echo '</p>';
             echo '<h3 class="product-description">Description</h3>';
             echo '<p class="product-description">';
             echo $row['description'];

@@ -14,7 +14,7 @@ body {
 .filters {
     float: left;
     width:  20%;
-    height: 100%;
+    height: min-content;
     background-color: white;
     /*width: 16%;*/
     /*height: 690px;*/
