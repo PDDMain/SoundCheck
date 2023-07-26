@@ -23,8 +23,9 @@ if (!isset($_POST['username'], $_POST['password'])) {
     $encoded_message = urlencode($error_message); // URL-encode the error message to handle special characters.
 
     // Redirect the user to the error page with the error message as a query parameter.
-    header("Location: ../error_page.php?message=$encoded_message");
-    exit;
+    $_SESSION['login_error'] = $encoded_message;
+    header('Location: ../login.php');
+    exit();
 }
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
@@ -51,18 +52,19 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
         } else {
             // Incorrect password
             $error_message = "Incorrect username and/or password!"; // Set your custom error message here.
-            $encoded_message = urlencode($error_message); // URL-encode the error message to handle special characters.
 
             // Redirect the user to the error page with the error message as a query parameter.
-            header("Location: ../error_page.php?message=$encoded_message");
+            $_SESSION['login_error'] = $error_message;
+            header('Location: ../login.php');
+            exit();
         }
     } else {
         // Incorrect username
         $error_message = "Incorrect username and/or password!"; // Set your custom error message here.
-        $encoded_message = urlencode($error_message); // URL-encode the error message to handle special characters.
 
         // Redirect the user to the error page with the error message as a query parameter.
-        header("Location: ../error_page.php?message=$encoded_message");
+        $_SESSION['login_error'] = $error_message;
+        header('Location: ../login.php');
     }
 
 
