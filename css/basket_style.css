@@ -36,6 +36,9 @@ main {
 
 .product {
     width: 90%;
+    height: 90%;
+
+    object-fit: contain;
     margin-top: 5%;
     margin-left: 5%;
 }
@@ -102,7 +105,9 @@ main {
     font-size: 26px;
 }
 .name {
-    font-size: 36px;
+    font-size: 26px;
+    /*background-color: #4a536e;*/
+
 }
 
 .delete_button {
