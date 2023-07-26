@@ -7,7 +7,7 @@ body {
 
 /* Admin Dashboard Styles */
 main {
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 180px;
     text-align: center;
 }
@@ -52,7 +52,8 @@ main {
 }
 
 ul li a {
-    font-size: 18px;
+    font-size: 26px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 nav ul li a {

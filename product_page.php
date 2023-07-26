@@ -14,7 +14,7 @@ if (!isset($_SESSION['loggedin'])) {
     <title>Title</title>
     <link rel="stylesheet" href="css/product_style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
 <header>
 
     <div class="header-navigation">
-        <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+        <div><a href="first_page.php"><img class="logo" src="img/logo.jpg"></a></div>
         <div class="search-container">
             <form class="search" action="main.php" method="get">
                 <input type="text" name="search" placeholder="Search">

@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
 <header>
     <div class="header-navigation">
-    <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+    <div><a href="first_page.php"><img class="logo" src="img/logo.jpg"></a></div>
     <div class="search-container">
         <form class="search" action="main.php" method="get">
             <input type="text" name="search" placeholder="Search">

@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Login</title>
-    <!-- Add your CSS file link here -->
+    <link href="css/admin_login.css" rel="stylesheet" type="text/css">
+    <link href="css/header.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="login-form">
-    <h1>Admin Login</h1>
-    <?php
-    // Display the login error message (if set) from the session
-    session_start();
-    if (isset($_SESSION['login_error'])) {
-        echo '<p class="error-message">' . $_SESSION['login_error'] . '</p>';
-        unset($_SESSION['login_error']); // Clear the error message after displaying it
-    }
-    ?>
-    <form action="admin_authenticate.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-        <input type="submit" value="Login">
-    </form>
-</div>
+<header>
+    <div><a href="../main.php"><img class="logo" src="../img/logo.jpg"></a></div>
+    <h2>Admin Panel</h2>
+    <nav>
+        <ul>
+            <li><a href="admin_dashboard.php">Dashboard</a></li>
+            <li><a href="view_users.php">View Users</a></li>
+            <li><a href="add_product.php">Add product</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="login_form">
+        <h1>Login</h1>
+        <form action="admin_authenticate.php" method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</main>
 </body>
 </html>

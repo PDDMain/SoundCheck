@@ -1,0 +1,88 @@
+.product-form {
+    margin: 200px 190px auto 100px;
+}
+
+.product-form form {
+    margin: 0;
+    padding: 0;
+}
+
+.product-form h2 {
+    margin-bottom: 35px;
+}
+
+.product-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.product-form select,
+.product-form input[type="text"],
+.product-form textarea {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.product-form .categories {
+    font-size: 22px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.product-form .categories input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+
+.product-form input[type="text"],
+.product-form textarea {
+    width: 80%;
+}
+
+.product-form select {
+    width: 81.3%;
+}
+
+.product-form textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.product-form input[type="submit"] {
+    width: 78%;
+    height: 60px;
+    padding: 15px;
+    margin: 20px;
+    background-color: black;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+.product-form input[type="submit"]:hover {
+    background-color: grey;
+    transition: background-color 0.2s;
+}
+
+/* Add the previous styles for the form elements here */
+
+/* Additional styles for the color input */
+.product-form input[type="color"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Optional style to remove default dropdown arrow in some browsers */
+.product-form select::-ms-expand {
+    display: none;
+}

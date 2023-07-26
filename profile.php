@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 <header>
     <div class="header-navigation">
-        <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+        <div><a href="first_page.php"><img class="logo" src="img/logo.jpg"></a></div>
         <div class="search-container">
             <div class="search">
                 <input type="text" placeholder="Search">
