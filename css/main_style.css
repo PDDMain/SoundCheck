@@ -113,6 +113,7 @@ main {
 
  .buy_button{
     width:50%;
+     height: 40px;
     /*margin-right: 5%;*/
     /*padding: 20px 10%;*/
     padding: 10px;
@@ -148,13 +149,20 @@ main {
     margin-right: 5%;
 }
 .name {
+    /*background-color: #4a536e;*/
+    text-align: left;
     text-decoration: none;
     color: black;
-    font-size: 22px;
-    margin: 10px;
+    font-size: 18px;
     font-weight: 500;
+    /*margin: 10px;*/
+    margin-left: 1px;
+    height: 50px;
 }
 
+div.name {
+    margin-left: 12px;
+}
 
 .name:hover {
     color: #FF4386;
@@ -188,6 +196,8 @@ main {
     width: 24px;
     float: right;
     padding: 8px;
+    color: white;
+    background-color: black;
 }
 
 .minus_button {
