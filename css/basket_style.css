@@ -13,13 +13,15 @@ body {
 }
 
 .buy {
-
+    margin-left: 40px;
+    min-width: max-content;
     background-color: white;
     width: 25%;
+    height: min-content;
     /*height: 700px;*/
     float: right;
     right: 5%;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     margin-right: 4%;
     padding-left: 1.5%;
     padding-right: 1.5%;
@@ -30,6 +32,7 @@ body {
 
 main {
     margin-top: 40px;
+    display: flex;
     /*background-color: brown;*/
 }
 
@@ -182,10 +185,11 @@ main {
 
 
 .item {
-    min-width: min-content;
+    min-width: max-content;
+
     display: flex;
     /*display: inline-block;*/
-    width: 50%;
+    width: 80%;
     height: 170px;
     /*padding-top: 14px;*/
     background-color: white;
@@ -239,5 +243,9 @@ main {
 }
 
 .items {
+    min-width: max-content;
+    padding-left: 8%;
+    /*background-color: darkturquoise;*/
+    width: 75%;
     float: left;
 }
