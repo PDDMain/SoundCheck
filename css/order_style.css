@@ -79,6 +79,7 @@ main {
 
 .confirm-order:hover{
     background-color: #FF4386;
+    cursor: pointer;
 }
 .main {
     /* Add padding at the bottom to make space for the fixed footer */
