@@ -9,18 +9,6 @@ main {
     padding: 300px;
 }
 
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .error_message {
     font-size: 24px;
     text-align: center;
