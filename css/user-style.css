@@ -20,7 +20,7 @@ main {
 
 .user-info{
     width: 30%;
-    min-width: max-content;
+    min-width: min-content;
 }
 .us-inf{
     padding: 10px;
@@ -37,6 +37,7 @@ main {
     padding: 10px 10px 5px 10px;
     font-size: 16px;
     font-weight: bold;
+    /*min-width: max-content;*/
 }
 .information{
     padding: 0 10px 10px 10px;
@@ -44,6 +45,7 @@ main {
     border: none;
     font-family: 'Quicksand', sans-serif;
     width: 90%;
+    /*min-width: max-content;*/
 }
 
 .information:focus {
@@ -98,6 +100,7 @@ main {
 }
 
 .orders-info {
+    min-width: max-content;
     height: max-content;
     background-color: white;
     display: inline-block;
@@ -118,13 +121,18 @@ main {
 }
 
 .order-id{
+    min-width: max-content;
     width: 15%;
     font-size: 20px;
+    margin:10px;
 }
 .order-date{
+    min-width: max-content;
     width: 15%;
+    margin:10px;
 }
 .order-price{
+    min-width: max-content;
     text-align: right;
     width: 15%;
     font-size: 2vw;
