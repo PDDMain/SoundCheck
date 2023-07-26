@@ -46,7 +46,7 @@
 </header>
 <main>
 
-    <a href="#">
+    <a href="main.php">
         <img class="welcome" src="img/welcome.jpg">
     </a>
 
