@@ -10,8 +10,8 @@ if (!isset($_SESSION['admin_logged_in'])) {
 
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = 'root';
+$DATABASE_USER = 'admin';
+$DATABASE_PASS = '0f4828da8bb2c1de5036206c7bab79319c3ba671516ca6fe';
 $DATABASE_NAME = 'example';
 
 // Create a connection to the database
