@@ -13,8 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($action === 'increase' || $action === 'decrease') {
             // Change this to your database connection details
             $host = 'localhost';
-            $username = 'root';
-            $password = 'root';
+            $username = 'admin';
+            $password = '0f4828da8bb2c1de5036206c7bab79319c3ba671516ca6fe';
             $database = 'example';
 
             // Create a new MySQLi object

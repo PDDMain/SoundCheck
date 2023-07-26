@@ -11,8 +11,8 @@ if (!isset($_SESSION['loggedin'])) {
 if (isset($_POST['good_id']) && !empty($_POST['good_id'])) {
     // Database connection details
     $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'root';
+    $DATABASE_USER = 'admin';
+    $DATABASE_PASS = '0f4828da8bb2c1de5036206c7bab79319c3ba671516ca6fe';
     $DATABASE_NAME = 'example';
 
     // Try and connect using the info above.
