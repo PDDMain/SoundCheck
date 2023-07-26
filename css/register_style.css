@@ -138,18 +138,13 @@ body {
 main {
     /*background-image: url("img/background-default.jpg");*/
     background-size: cover;
-
 }
-
-
-
 
 .product {
     width: 90%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
-
 
 .error {
     background-color: white;
