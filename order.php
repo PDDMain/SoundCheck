@@ -8,10 +8,10 @@ if (!isset($_SESSION['loggedin'])) {
 
 $user_id = $_SESSION['id'];
 
-$servername = 'localhost';
-$username = 'admin';
-$password = '0f4828da8bb2c1de5036206c7bab79319c3ba671516ca6fe';
-$dbname = 'example';
+$servername = "localhost";
+$username = "admin";
+$password = "0f4828da8bb2c1de5036206c7bab79319c3ba671516ca6fe";
+$dbname = "example";
 
 // Create a connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
