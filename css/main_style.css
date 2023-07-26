@@ -138,7 +138,7 @@ main {
 }
 
 .buy_button:hover{
-    /*background-color: #FF4386;*/
+    background-color: #FF4386;
     cursor: pointer;
 }
 
