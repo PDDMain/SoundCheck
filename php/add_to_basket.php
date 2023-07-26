@@ -39,13 +39,13 @@ if (isset($_POST['good_id']) && !empty($_POST['good_id'])) {
 
         if ($stmt->num_rows === 0) {
             // Insert the product into the basket
-            $insert_query = "INSERT INTO basket (user_id, good_id) VALUES ($user_id, $good_id)";
+            $insert_query = "INSERT INTO basket (user_id, good_id, count) VALUES ($user_id, $good_id, 1)";
             echo "$insert_query";
             if ($stmt = $con->prepare($insert_query)) {
                 echo "$insert_query";
                 $stmt->execute();
 
-                header('Location: main.php');
+                header('Location: ../main.php');
                 exit;
             }
             $stmt->close();
