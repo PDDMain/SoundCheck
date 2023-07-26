@@ -73,12 +73,8 @@
 
     // Retrieve the user ID from the session
     $user_id = $_SESSION['id'];
-    $query1 = "SELECT goods.price, basket.count FROM goods 
-              INNER JOIN basket ON goods.id = basket.good_id 
-              WHERE basket.user_id = $user_id";
-
     // Fetch the goods from the database that are in the user's basket
-    $query = "SELECT * FROM messages";
+    $query = "SELECT * FROM messages ORDER BY time DESC";
 
     $result = $mysqli->query($query);
 
