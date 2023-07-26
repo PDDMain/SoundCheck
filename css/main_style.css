@@ -3,19 +3,24 @@ body {
     background-size: cover;
     margin: 0;
 }
-.container_aside {
-    /*height: 1000px;*/
-    /*width: 16%;*/
-    /*background-color: brown;*/
+
+.items {
+    /*background-color: blueviolet;*/
+    width: 80%;
+
+
+    float: left;
 }
 .filters {
-    background-color: white;
-    width: 16%;
-    /*height: 690px;*/
     float: left;
+    width:  20%;
+    height: 100%;
+    background-color: white;
+    /*width: 16%;*/
+    /*height: 690px;*/
     margin-left: 4%;
-
-    margin-top: 40px;
+    min-width: min-content;
+    /*margin-top: 40px;*/
     /*margin-top: 183px;*/
     padding-bottom: 30px;
     padding-left: 25px;
@@ -84,9 +89,10 @@ body {
 main {
     /*background-image: url("img/background-default.jpg");*/
     /*background-size: cover;*/
-    margin-top: 40px;
-    margin-left: 300px;
+    /*margin-left: 20%;*/
     /*background-color: cornflowerblue;*/
+    margin-top: 50px;
+    display: flex;
 
 }
 
@@ -100,16 +106,20 @@ main {
 }
 
 .square {
+    min-width: min-content;
     display: inline-table;
     width: 27%;
     background-color: white;
-    margin-left: 5%;
+    margin-left: 50px;
     margin-bottom: 67px;
     text-align: center;
     /*float: left;*/
 }
 
-
+.amounts_buttons {
+    min-width: min-content;
+    display: flex;
+}
 
  .buy_button{
     width:50%;
@@ -128,16 +138,17 @@ main {
 }
 
 .buy_button:hover{
-    background-color: #FF4386;
+    /*background-color: #FF4386;*/
     cursor: pointer;
 }
 
 .price{
     padding-left: 16px;
-    background-color: #fff;
+    /*background-color: coral;*/
     display: flex;
     align-items: center;
     justify-content: right;
+    min-width: max-content;
 }
 
 .price-text{

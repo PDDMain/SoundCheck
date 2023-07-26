@@ -53,23 +53,23 @@ if (!isset($_SESSION['loggedin'])) {
         <a class="cath" href="#">Wireless</a>
     </div>
 </header>
-<div class="container_aside">
-    <aside class="filters">
+    <main>
+    <div class="filters">
         <form action="main.php" method="get">
             <h1>Filters</h1>
 
             <h2>Brands</h2>
-            <input type="checkbox" name="category" value="Samsung"> Samsung
+            <input class="filters_checkbox" type="checkbox" name="category" value="Samsung"> Samsung
             <br>
-            <input type="checkbox" name="category" value="Apple"> Apple
+            <input class="filters_checkbox" type="checkbox" name="category" value="Apple"> Apple
             <br>
-            <input type="checkbox" name="category" value="Xiaomi"> Xiaomi
+            <input class="filters_checkbox" type="checkbox" name="category" value="Xiaomi"> Xiaomi
             <br>
-            <input type="checkbox" name="category" value="JVC"> JVC
+            <input class="filters_checkbox" type="checkbox" name="category" value="JVC"> JVC
             <br>
-            <input type="checkbox" name="category" value="Meze"> Meze
+            <input class="filters_checkbox" type="checkbox" name="category" value="Meze"> Meze
             <br>
-            <input type="checkbox" name="category" value="Sennheiser"> Sennheiser
+            <input class="filters_checkbox" type="checkbox" name="category" value="Sennheiser"> Sennheiser
 
 
             <h2>Price</h2>
@@ -89,10 +89,10 @@ if (!isset($_SESSION['loggedin'])) {
             </select>
             <input type="submit" id="filter_button" value="Filter">
         </form>
-    </aside>
-</div>
-<main>
+    </div>
 
+
+<div class="items">
     <!--    <div class="square">-->
     <!--        <form action="php/add_to_basket.php" method="post">-->
     <!--            <a href="https://www.google.com/"><img class="product" src="img/product.jpg" alt=""></a>-->
@@ -191,9 +191,11 @@ if (!isset($_SESSION['loggedin'])) {
                 echo '<input type="hidden" name="user_id" value="' . $user_id . '">';
                 echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
                 echo '<input type="hidden" name="return_page" value="main.php">';
-                echo '<button type="submit" name="action" value="increase" class="plus_button">+</button>';
-                echo '<label class="amount_of_item">' . $row1['count'] . '</label>';
+                echo '<div class="amounts_buttons">';
                 echo '<button type="submit" name="action" value="decrease" class="minus_button">-</button>';
+                echo '<label class="amount_of_item">' . $row1['count'] . '</label>';
+                echo '<button type="submit" name="action" value="increase" class="plus_button">+</button>';
+                echo '</div>';
                 echo '</form>';
             } else {
                 echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
@@ -205,7 +207,7 @@ if (!isset($_SESSION['loggedin'])) {
             }
             echo '</div>';
         }
-        echo '</ul>';
+        echo '</div>';
     } else {
         echo 'No goods found.';
     }
@@ -213,7 +215,7 @@ if (!isset($_SESSION['loggedin'])) {
     // Close the database connection
     $mysqli->close();
     ?>
-
+</div>
 </main>
 <footer class="footer">
     <!-- Footer content goes here -->
