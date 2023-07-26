@@ -13,7 +13,7 @@
 <body>
 <header>
     <div class="header-navigation">
-        <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+        <div><a href="first_page.php"><img class="logo" src="img/logo.jpg"></a></div>
         <div class="search-container">
             <form class="search" action="main.php" method="get">
                 <input type="text" name="search" placeholder="Search">
@@ -22,13 +22,13 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">
+                <li><a href="profile.php">
                         <div class="user-container">
                             <img class="user" src="img/user_icon.jpg">
                             <img class="user-hover" src="img/user_icon_hover.jpg">
                         </div>
                     </a></li>
-                <li><a href="#">
+                <li><a href="basket.php">
                         <div class="cart-container">
                             <img class="cart" src="img/shopping_cart_icon.jpg">
                             <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
@@ -73,12 +73,8 @@
 
     // Retrieve the user ID from the session
     $user_id = $_SESSION['id'];
-    $query1 = "SELECT goods.price, basket.count FROM goods 
-              INNER JOIN basket ON goods.id = basket.good_id 
-              WHERE basket.user_id = $user_id";
-
     // Fetch the goods from the database that are in the user's basket
-    $query = "SELECT * FROM messages";
+    $query = "SELECT * FROM messages ORDER BY time DESC";
 
     $result = $mysqli->query($query);
 
