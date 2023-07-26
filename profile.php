@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Title</title>
     <link rel="stylesheet" href="css/user-style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/header-cathegories.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -126,6 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </nav>
     </div>
     <div class="header-cathegories">
+        <a class="cath" href="#">All</a>
         <a class="cath" href="#">In-ear</a>
         <a class="cath" href="#">Over-ear</a>
         <a class="cath" href="#">Wireless</a>
@@ -137,6 +138,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="user-info">
             <form class="us-inf" method="post">
                 <div class="my-info">My information</div>
+                <div class="information-title">Username</div>
+                                <input class="information" contenteditable="false" type="text" name="username"
+                                       value="<?php echo $username; ?>">
                 <div class="information-title">First name</div>
                 <input class="information" contenteditable="true" type="text" name="first_name"
                        value="<?php echo $first_name; ?>">
@@ -145,9 +149,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input class="information" contenteditable="true" type="text" name="second_name"
                        value="<?php echo $second_name; ?>">
                 <!--        <hr>-->
-                <div class="information-title">Username</div>
-                <input class="information" contenteditable="true" type="text" name="username"
-                       value="<?php echo $username; ?>">
                 <!--        <hr>-->
                 <div class="information-title">Email</div>
                 <input class="information" contenteditable="true" type="text" name="email"
