@@ -55,6 +55,7 @@ if (!isset($_SESSION['loggedin'])) {
 </header>
 
 <main>
+    <div class="items">
     <?php
     $host = 'localhost';
     $username = 'root';
@@ -157,15 +158,15 @@ if (!isset($_SESSION['loggedin'])) {
     // Close the database connection
     $mysqli->close();
     ?>
-
-
+    </div>
+    <div class="buy">
+        <?php
+        echo '<p>Total (' . $items . ' items): <label class="all_price">' . $price . '$</label> </p>'
+        ?>
+        <a href="order.php"><input type="submit" src="order.php" value="Order"></a>
+    </div>
 </main>
-<aside class="buy">
-    <?php
-    echo '<p>Total (' . $items . ' items): <label class="all_price">' . $price . '$</label> </p>'
-    ?>
-    <a href="order.php"><input type="submit" src="order.php" value="Order"></a>
-</aside>
+
 <footer class="footer">
     <!-- Footer content goes here -->
     <p>&copy; 2023 All rights reserved.</p>
