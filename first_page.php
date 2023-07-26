@@ -58,8 +58,8 @@
 
     <?php
     $host = 'localhost';
-    $username = 'root';
-    $password = 'root';
+    $username = 'admin';
+    $password = '0f4828da8bb2c1de5036206c7bab79319c3ba671516ca6fe';
     $database = 'example';
 
     // Create a new MySQLi object
