@@ -68,8 +68,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Add New Product</title>
-    <link rel="stylesheet" href="css/header.css"></head>
-    <link rel="stylesheet" href="css/add_product.css"></head>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/add_product.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
 <header>
     <div><a href="../main.php"><img class="logo" src="../img/logo.jpg"></a></div>

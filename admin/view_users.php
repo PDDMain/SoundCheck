@@ -35,6 +35,9 @@ $result = $mysqli->query($sql);
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/view_user.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
