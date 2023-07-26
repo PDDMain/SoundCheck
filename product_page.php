@@ -1,3 +1,12 @@
+<?php
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.html');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,29 +24,29 @@
 <header>
 
     <div class="header-navigation">
-    <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
-    <div class="search-container">
-        <form class="search" action="main.php" method="get">
-            <input type="text" name="search" placeholder="Search">
-            <button type="submit" class="search-button">Search</button>
-        </form>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="profile.php">
-                    <div class="user-container">
-                        <img class="user" src="img/user_icon.jpg">
-                        <img class="user-hover" src="img/user_icon_hover.jpg">
-                    </div>
-                </a></li>
-            <li><a href="basket.php">
-                    <div class="cart-container">
-                        <img class="cart" src="img/shopping_cart_icon.jpg">
-                        <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
-                    </div>
-                </a></li>
-        </ul>
-    </nav>
+        <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+        <div class="search-container">
+            <form class="search" action="main.php" method="get">
+                <input type="text" name="search" placeholder="Search">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="profile.php">
+                        <div class="user-container">
+                            <img class="user" src="img/user_icon.jpg">
+                            <img class="user-hover" src="img/user_icon_hover.jpg">
+                        </div>
+                    </a></li>
+                <li><a href="basket.php">
+                        <div class="cart-container">
+                            <img class="cart" src="img/shopping_cart_icon.jpg">
+                            <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
+                        </div>
+                    </a></li>
+            </ul>
+        </nav>
     </div>
     <div class="header-cathegories">
         <a class="cath" href="#">All</a>
