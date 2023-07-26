@@ -47,6 +47,7 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
     </div>
     <div class="header-cathegories">
+        <a class="cath" href="#">All</a>
         <a class="cath" href="#">In-ear</a>
         <a class="cath" href="#">Over-ear</a>
         <a class="cath" href="#">Wireless</a>
