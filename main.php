@@ -17,6 +17,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 <body>
 <header>
+    <div class="header-navigation">
     <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
     <div class="search-container">
         <form class="search" action="main.php" method="get">
@@ -26,13 +27,13 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
     <nav>
         <ul>
-            <li><a href="#">
+            <li><a href="profile.php">
                     <div class="user-container">
                         <img class="user" src="img/user_icon.jpg">
                         <img class="user-hover" src="img/user_icon_hover.jpg">
                     </div>
                 </a></li>
-            <li><a href="#">
+            <li><a href="basket.php">
                     <div class="cart-container">
                         <img class="cart" src="img/shopping_cart_icon.jpg">
                         <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
@@ -40,8 +41,14 @@ if (!isset($_SESSION['loggedin'])) {
                 </a></li>
         </ul>
     </nav>
+    </div>
+    <div class="header-cathegories">
+        <a class="cath" href="#">In-ear</a>
+        <a class="cath" href="#">Over-ear</a>
+        <a class="cath" href="#">Wireless</a>
+    </div>
 </header>
-
+<div class="container_aside">
 <aside class="filters">
     <form action="main.php" method="get">
     <h1>Filters</h1>
@@ -78,6 +85,7 @@ if (!isset($_SESSION['loggedin'])) {
     <input type="submit" id="filter_button" value="Filter">
     </form>
 </aside>
+</div>
 <main>
 
 <!--    <div class="square">-->
@@ -86,7 +94,13 @@ if (!isset($_SESSION['loggedin'])) {
 <!--        <div class="name"> Very expensive earphones</div>-->
 <!--        <div class="price">-->
 <!--            <div class="price-text">1999$</div>-->
-<!--                <input type="submit" value="Buy" class="buy_button">-->
+
+<!--    <div class="change_amount">-->
+<!--        <button class="plus_button">+</button>-->
+<!--        <label class="amount_of_item">1</label>-->
+<!--       <button class="minus_button">-</button>-->
+<!--    </div>-->
+
 <!--        </div>-->
 <!--        </form>-->
 <!--    </div>-->
@@ -157,7 +171,7 @@ if (!isset($_SESSION['loggedin'])) {
             echo '<div class="square">';
             echo '<form action="php/add_to_basket.php" method="post">';
             echo '<a href=product_page.php?good_id="' . $row['id'] . '"><img class="product" src="' . $row['image_link'] . '" alt=""></a>';
-            echo '<div class="name"> ' . $row['name'] . '</div>';
+            echo '<div class="name"> <a class="name" href=product_page.php?good_id="' . $row['id'] . '">' . $row['name'] . '</a></div>';
             echo '<div class="price">';
             echo '<div class="price-text">' . $row['price'] . '$</div>';
             echo '<input type="submit" value="Buy" class="buy_button">';

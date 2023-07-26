@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="css/user-style.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/user-style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header-cathegories.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-  <div class="header-navigation">
-  <div><img class="logo" src="img/logo.jpg"></div>
-  <div class="search-container">
-    <div class="search">
-      <input type="text" placeholder="Search">
-      <button class="search-button">Search</button>
+    <div class="header-navigation">
+        <div><img class="logo" src="img/logo.jpg"></div>
+        <div class="search-container">
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">
+                    <div class="user-container">
+                        <img class="user" src="img/user_icon.jpg">
+                        <img class="user-hover" src="img/user_icon_hover.jpg">
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="cart-container">
+                        <img class="cart" src="img/shopping_cart_icon.jpg">
+                        <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
+                    </div>
+                </a></li>
+            </ul>
+        </nav>
     </div>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#">
-        <div class="user-container">
-          <img class="user" src="img/user_icon.jpg">
-          <img class="user-hover" src="img/user_icon_hover.jpg">
-        </div>
-      </a></li>
-      <li><a href="#">
-        <div class="cart-container">
-          <img class="cart" src="img/shopping_cart_icon.jpg">
-          <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
-        </div>
-      </a></li>
-    </ul>
-  </nav>
-  </div>
-  <div class="gap"></div>
-  <div class="header-cathegories">
-    <a class="cath" href="#">In-ear</a>
-    <a class="cath" href="#">Over-ear</a>
-    <a class="cath" href="#">Wireless</a>
-  </div>
+    <div class="gap"></div>
+    <div class="header-cathegories">
+        <a class="cath" href="#">In-ear</a>
+        <a class="cath" href="#">Over-ear</a>
+        <a class="cath" href="#">Wireless</a>
+    </div>
 </header>
 <div></div>
 <main>
-  <div class="user-page">
-    <div class="user-info">
-      <div class="us-inf">
-        <div class="my-info">My information</div>
-        <div class="information-title">First name</div>
-        <div class="information" contenteditable="true">
-          First name
+    <div class="user-page">
+        <div class="user-info">
+            <div class="us-inf">
+                <div class="my-info">My information</div>
+                <div class="information-title">First name</div>
+                <div class="information" contenteditable="true">
+                    First name
+                </div>
+                <!--        <hr>-->
+                <div class="information-title">Last name</div>
+                <div class="information" contenteditable="true">
+                    Last name
+                </div>
+                <!--        <hr>-->
+                <div class="information-title">Email</div>
+                <div class="information" contenteditable="true">
+                    example@mailbox.com
+                </div>
+                <!--        <hr>-->
+                <div class="information-title">Phone number</div>
+                <div class="information" contenteditable="true">
+                    (XXX) XXX-XX-XX
+                </div>
+                <button class="edit">Confirm changes</button>
+                <button class="logout">Log out</button>
+            </div>
         </div>
-<!--        <hr>-->
-        <div class="information-title">Last name</div>
-        <div class="information" contenteditable="true">
-          Last name
-        </div>
-<!--        <hr>-->
-        <div class="information-title">Email</div>
-        <div class="information" contenteditable="true">
-          example@mailbox.com
-        </div>
-<!--        <hr>-->
-        <div class="information-title">Phone number</div>
-        <div class="information" contenteditable="true">
-          (XXX) XXX-XX-XX
-        </div>
-        <button class="edit">Confirm changes</button>
-        <button class="logout">Log out</button>
-      </div>
-    </div>
 
-    <div class="orders-info">
-      <div class="orders-title">Order history</div>
-      <div class="order-info">
-      <div class="order-id">Order ID: 123456-7938</div>
-      <div class="order-date">Date: 12.03.2023</div>
-      <div class="order-price"> 12579$</div>
-      </div>
-      <hr>
-      <div class="order-info">
-        <div class="order-id">Order ID: 123456-7938</div>
-        <div class="order-date">Date: 12.03.2023</div>
-        <div class="order-price"> 10$</div>
-      </div>
+        <div class="orders-info">
+            <div class="orders-title">Order history</div>
+            <div class="order-info">
+                <div class="order-id">Order ID: 123456-7938</div>
+                <div class="order-date">Date: 12.03.2023</div>
+                <div class="order-price"> 12579$</div>
+            </div>
+            <hr>
+            <div class="order-info">
+                <div class="order-id">Order ID: 123456-7938</div>
+                <div class="order-date">Date: 12.03.2023</div>
+                <div class="order-price"> 10$</div>
+            </div>
+        </div>
     </div>
-  </div>
 </main>
 <footer class="footer">
-  <p>&copy; 2023 All rights reserved.</p>
+    <p>&copy; 2023 All rights reserved.</p>
 </footer>
 </body>
 </html>

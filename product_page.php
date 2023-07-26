@@ -11,6 +11,8 @@
 </head>
 <body>
 <header>
+
+    <div class="header-navigation">
     <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
     <div class="search-container">
         <form class="search" action="main.php" method="get">
@@ -20,13 +22,13 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#">
+            <li><a href="profile.php">
                     <div class="user-container">
                         <img class="user" src="img/user_icon.jpg">
                         <img class="user-hover" src="img/user_icon_hover.jpg">
                     </div>
                 </a></li>
-            <li><a href="#">
+            <li><a href="basket.php">
                     <div class="cart-container">
                         <img class="cart" src="img/shopping_cart_icon.jpg">
                         <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
@@ -34,6 +36,12 @@
                 </a></li>
         </ul>
     </nav>
+    </div>
+    <div class="header-cathegories">
+        <a class="cath" href="#">In-ear</a>
+        <a class="cath" href="#">Over-ear</a>
+        <a class="cath" href="#">Wireless</a>
+    </div>
 </header>
 <div class="gap"></div>
 <div></div>
