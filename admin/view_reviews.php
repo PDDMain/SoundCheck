@@ -24,7 +24,7 @@ if ($mysqli->connect_errno) {
 }
 
 // Fetch users from the database
-$sql = "SELECT * FROM goods";
+$sql = "SELECT * FROM messages";
 $result = $mysqli->query($sql);
 ?>
 
@@ -58,23 +58,18 @@ $result = $mysqli->query($sql);
         <table>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th style="white-space: nowrap">Price</th>
-                <th style="white-space: nowrap">Category</th>
-                <th>Color</th>
-                <th>Type</th>
-                <th>Action</th>
+                <th>UserID</th>
+                <th style="white-space: nowrap">Text</th>
+                <th style="white-space: nowrap">Time</th>
             </tr>
             <?php while ($row = $result->fetch_assoc()) { ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['price']; ?></td>
-                    <td><?php echo $row['category']; ?></td>
-                    <td><?php echo $row['color']; ?></td>
-                    <td><?php echo $row['type']; ?></td>
+                    <td><?php echo $row['user_id']; ?></td>
+                    <td><?php echo $row['text']; ?></td>
+                    <td><?php echo $row['time']; ?></td>
                     <td>
-                        <a href="delete_product.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
+                        <a href="delete_review.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this review?')">Delete</a>
                     </td>
                 </tr>
             <?php } ?>

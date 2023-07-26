@@ -7,8 +7,7 @@ body {
 
 /* Admin Dashboard Styles */
 main {
-    margin-top: 100px;
-    padding: 180px;
+    padding: 140px;
     text-align: center;
 }
 
@@ -27,11 +26,12 @@ main {
 
 .dashboard-content a {
     display: inline-block;
-    padding: 30px 60px;
+    padding: 20px 40px;
+    width: 230px;
     background-color: #000000;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 12px;
     transition: background-color 0.3s;
 }
 
