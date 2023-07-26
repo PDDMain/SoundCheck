@@ -42,9 +42,9 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
         header("Location: ../error_page.php?message=$encoded_message");
     } else {
         // Insert the new account into the database (Make sure to hash the password)
-        $register_query = 'INSERT INTO accounts (id, username, password, email) VALUES (NULL, ?, ?, ?);';
+        $register_query = 'INSERT INTO accounts (id, username, first_name, second_name, password, email, phone) VALUES (NULL, ?, ?, ?, ?, ?, 0);';
         if ($stmt = $con->prepare($register_query)) {
-            $stmt->bind_param('sss', $_POST['username'], $_POST['password'], $_POST['email']);
+            $stmt->bind_param('sssss', $_POST['username'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['email']);
             $stmt->execute();
             // Registration successful, you can redirect to the login page or display a success message
             header('Location: ../login.html');

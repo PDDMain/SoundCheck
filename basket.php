@@ -88,7 +88,7 @@ if (!isset($_SESSION['loggedin'])) {
     }
     echo '<p>Total (' . $items . ' items): <label class="all_price">' . $price . '$</label> </p>'
     ?>
-    <input type="submit" value="Order">
+    <a href="order.php"><input type="submit" src="order.php" value="Order"></a>
 </aside>
 
 <main>
