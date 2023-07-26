@@ -99,7 +99,7 @@ nav ul li a {
     border-radius: 20px 0 0 20px;
     padding: 8px;
     font-size: 17px;
-    background-color: #f0f0f0;
+    background-color: white;
     color: #333;
 }
 .search-button {
@@ -140,7 +140,7 @@ button {
 }
 
 .cath {
-    width: 33%;
+    width: 25%;
     font-size: 20px;
     text-decoration: none;
     color: black;

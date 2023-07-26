@@ -1,0 +1,135 @@
+body {
+    background: url("../img/background-default.jpg") no-repeat fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 30px 0 200px 0;
+}
+
+.order-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-info{
+    width: 40%;
+    min-width: min-content;
+    background-color: white;
+}
+.ord-inf{
+    /*width: 100%;*/
+    /*background-color: #4a536e;*/
+    /*display: flex;*/
+    flex-direction: column;
+    /*padding: 10px;*/
+    margin: 15px 5%;
+}
+
+.ord-inf form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 22px;
+    margin-bottom: 40px;
+}
+
+.information-title{
+    padding: 10px;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    /*min-width: max-content;*/
+}
+.information{
+    /*margin-right: 20px;*/
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.information:focus {
+    border: 2px solid #FF4386;
+    border-radius: 10px;
+    outline: none;
+}
+
+.confirm-order {
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.confirm-order:hover{
+    background-color: #FF4386;
+    cursor: pointer;
+}
+.main {
+    /* Add padding at the bottom to make space for the fixed footer */
+    padding-bottom: 60px; /* Adjust the value as per your footer height */
+}
+
+.bill-info{
+    /*margin: 20px;*/
+    min-width: max-content;
+    padding: 10px 0;
+    background-color: white;
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: center;
+    justify-content: space-between;
+    /*border: 1px solid #FF4386;*/
+    border-radius: 20px;
+}
+
+.total{
+    padding: 10px;
+    min-width: max-content;
+    width: 15%;
+    font-size: 20px;
+    /*font-weight: bold;*/
+    /*margin:10px;*/
+}
+
+.order-price{
+    min-width: max-content;
+    text-align: right;
+    width: 15%;
+    font-size: 25px;
+    font-weight: bold;
+    /*margin-right: 15px;*/
+}
+
+.order-num{
+    min-width: max-content;
+    text-align: right;
+    width: 15%;
+    font-size: 20px;
+    font-weight: bold;
+    /*margin-right: 15px;*/
+}
+
+.order-id{
+    padding: 10px;
+    min-width: max-content;
+    width: 15%;
+    font-size: 20px;
+    margin: 0;
+}

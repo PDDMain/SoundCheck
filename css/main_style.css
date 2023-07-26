@@ -3,19 +3,24 @@ body {
     background-size: cover;
     margin: 0;
 }
-.container_aside {
-    /*height: 1000px;*/
-    /*width: 16%;*/
-    /*background-color: brown;*/
+
+.items {
+    /*background-color: blueviolet;*/
+    width: 80%;
+
+
+    float: left;
 }
 .filters {
-    background-color: white;
-    width: 16%;
-    /*height: 690px;*/
     float: left;
+    width:  20%;
+    height: min-content;
+    background-color: white;
+    /*width: 16%;*/
+    /*height: 690px;*/
     margin-left: 4%;
-
-    margin-top: 40px;
+    min-width: min-content;
+    /*margin-top: 40px;*/
     /*margin-top: 183px;*/
     padding-bottom: 30px;
     padding-left: 25px;
@@ -44,21 +49,6 @@ body {
     width: 90%;
 }
 
-.filters select {
-
-    width: 90%;
-    height: 40px;
-    padding: 10px;
-    /*margin-left: 10px;*/
-    /*background-color: black;*/
-    border: 0;
-    cursor: pointer;
-    /*color: #;*/
-    /*transition: background-color 0.2s;*/
-    /*border-radius: 10px;*/
-
-}
-
 .filters input[type="submit"], #filter_button {
     width: 100%;
     height: 50px;
@@ -84,9 +74,10 @@ body {
 main {
     /*background-image: url("img/background-default.jpg");*/
     /*background-size: cover;*/
-    margin-top: 40px;
-    margin-left: 300px;
+    /*margin-left: 20%;*/
     /*background-color: cornflowerblue;*/
+    margin-top: 50px;
+    display: flex;
 
 }
 
@@ -100,25 +91,30 @@ main {
 }
 
 .square {
+    min-width: min-content;
     display: inline-table;
     width: 27%;
     background-color: white;
-    margin-left: 5%;
-    margin-bottom: 67px;
+    margin-left: 40px;
+    margin-bottom: 40px;
     text-align: center;
     /*float: left;*/
 }
 
-
+.amounts_buttons {
+    float: right;
+    min-width: min-content;
+    display: flex;
+}
 
  .buy_button{
-    width:50%;
+    width:120px;
      height: 40px;
     /*margin-right: 5%;*/
     /*padding: 20px 10%;*/
     padding: 10px;
     margin: 10px;
-    float: right;
+    /*float: right;*/
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     background-color: black;
@@ -134,10 +130,11 @@ main {
 
 .price{
     padding-left: 16px;
-    background-color: #fff;
+    /*background-color: coral;*/
     display: flex;
     align-items: center;
     justify-content: right;
+    min-width: max-content;
 }
 
 .price-text{
@@ -222,10 +219,62 @@ div.name {
 
 
 .change_amount {
-    width:50%;
+    min-width: min-content;
     /*margin-right: 5%;*/
     /*padding: 20px 10%;*/
     margin: 10px;
     float: right;
     /*background-color: #5b6574;*/
+}
+
+.filters_price{
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    /*width: 100%;*/
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.filters_price:focus{
+    border: 2px solid #FF4386;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type='checkbox']{
+    text-align: center;
+    /*display: table-cell;*/
+    vertical-align: middle;
+    width: 20px !important;
+    height: 20px !important;
+    appearance:none;
+    border-radius:50%;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    font-size: 0.8em;
+}
+
+input[type='checkbox']:checked {
+    background-color: #FF4386;
+    border: 1px solid #FF4386;
+}
+input[type='checkbox']:checked:after {
+    content: '\2713';
+    color:white;
+}
+
+.selector{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
