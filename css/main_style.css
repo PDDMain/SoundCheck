@@ -14,6 +14,8 @@ body {
     /*height: 690px;*/
     float: left;
     margin-left: 4%;
+
+    margin-top: 40px;
     /*margin-top: 183px;*/
     padding-bottom: 30px;
     padding-left: 25px;
@@ -82,7 +84,7 @@ body {
 main {
     /*background-image: url("img/background-default.jpg");*/
     /*background-size: cover;*/
-    margin-top: 150px;
+    margin-top: 40px;
     margin-left: 300px;
     /*background-color: cornflowerblue;*/
 

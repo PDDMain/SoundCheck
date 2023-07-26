@@ -17,16 +17,18 @@ body {
     /*height: 700px;*/
     float: right;
     right: 5%;
-    /*margin-top: 160px;*/
+    margin-top: 40px;
     margin-right: 4%;
     padding-left: 1.5%;
     padding-right: 1.5%;
     padding-bottom: 20px;
     text-align: left;
+    /*background-color: aqua;*/
 }
 
 main {
-    margin-top: 160px;
+    margin-top: 40px;
+    /*background-color: brown;*/
 
 }
 
