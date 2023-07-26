@@ -17,6 +17,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 <body>
 <header>
+    <div class="header-navigation">
     <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
     <div class="search-container">
         <form class="search" action="main.php" method="get">
@@ -40,7 +41,15 @@ if (!isset($_SESSION['loggedin'])) {
                 </a></li>
         </ul>
     </nav>
+    </div>
+    <div class="header-cathegories">
+        <a class="cath" href="#">In-ear</a>
+        <a class="cath" href="#">Over-ear</a>
+        <a class="cath" href="#">Wireless</a>
+    </div>
 </header>
+
+
 <aside class="buy">
     <?php
     $host = 'localhost';
