@@ -32,7 +32,14 @@
             </label>
             <input type="password" name="password" placeholder="Password" id="password" required>
 
-            <div class="error">incorrect password or username</div>
+            <?php
+            // Display the login error message (if set) from the session
+            session_start();
+            if (isset($_SESSION['login_error'])) {
+                echo '<div class="error">' . $_SESSION['login_error'] . '</div>';
+                unset($_SESSION['login_error']); // Clear the error message after displaying it
+            }
+            ?>
             <input type="submit" value="Login">
         </form>
     </div>
