@@ -46,8 +46,6 @@ $result = $mysqli->query($sql);
     <nav>
         <ul>
             <li><a href="admin_dashboard.php">Dashboard</a></li>
-            <li><a href="view_users.php">View Users</a></li>
-            <li><a href="add_product.php">Add product</a></li>
             <li><a href="admin_logout.php">Logout</a></li>
         </ul>
     </nav>

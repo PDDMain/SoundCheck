@@ -27,8 +27,6 @@ if (!isset($_SESSION['admin_logged_in'])) {
     <nav>
         <ul>
             <li><a href="admin_dashboard.php">Dashboard</a></li>
-            <li><a href="view_users.php">View Users</a></li>
-            <li><a href="add_product.php">Add product</a></li>
             <li><a href="admin_logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -43,6 +41,8 @@ if (!isset($_SESSION['admin_logged_in'])) {
             <li><a href="view_users.php">View Users</a></li>
             <li><a href="view_products.php">View Products</a></li>
             <li><a href="add_product.php">Add New Product</a></li>
+            <li><a href="view_reviews.php">View Reviews</a></li>
+
             <!-- Add more links/buttons for other admin functionalities -->
         </ul>
     </div>
