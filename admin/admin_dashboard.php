@@ -41,6 +41,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
         <!-- Add links or buttons for managing users and products -->
         <ul>
             <li><a href="view_users.php">View Users</a></li>
+            <li><a href="view_products.php">View Products</a></li>
             <li><a href="add_product.php">Add New Product</a></li>
             <!-- Add more links/buttons for other admin functionalities -->
         </ul>
