@@ -110,21 +110,53 @@ if (!isset($_SESSION['loggedin'])) {
             echo '<a href=product_page.php?good_id="' . $row['id'] . '"><img class="product" src="' . $row['image_link'] . '" alt=""></a>';
             echo '</div>';
             echo '<div class="right_item">';
+//            echo '<div class="top_right_item">';
             echo '<form action="php/basket_delete.php" method="post" class="top_right_item">';
+
+
+            echo '<div class="name_div">';
             echo '<label class="name">' . $row['name'] . '</label>';
+            echo '</div>';
+
+
             echo '<input type="hidden" name="user_id" value="' . $user_id . '">';
             echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
+
+            echo '<div class="delete_div">';
             echo '<button class="delete_button">Remove</button>';
+            echo '</div>';
+
             echo '</form>';
+//            echo '</div>';
+
+
             echo '<form action="php/basket_inc.php" method="post" class="bottom_right_item">';
             echo '<input type="hidden" name="user_id" value="' . $user_id . '">';
             echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
             echo '<input type="hidden" name="return_page" value="basket.php">';
+
+
+            echo '<div class="price_div">';
             echo '<label class="price_of_item">' . $row['price'] . '$</label>';
-            echo '<button type="submit" name="action" value="increase" class="plus_button">+</button>';
-            echo '<label class="amount_of_item">' . $row['count'] . '</label>';
+            echo '</div>';
+
+            echo '<div class="amount_div">';
+            echo '<div class="change_amount">';
+
             echo '<button type="submit" name="action" value="decrease" class="minus_button">-</button>';
+            echo '<label class="amount_of_item">' . $row['count'] . '</label>';
+            echo '<button type="submit" name="action" value="increase" class="plus_button">+</button>';
+
+
+            echo '</div>';
+
+            echo '</div>';
+
+
+
             echo '</form>';
+
+
             echo '</div>';
             echo '</div>';
         }
