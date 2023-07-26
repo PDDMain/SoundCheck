@@ -55,9 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare and execute the INSERT query
-    $sql = "INSERT INTO orders (user_id, name, email, phone, address, price) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO orders (id, user_id, name, email, phone, address, price) VALUES (NULL, '$user_id', '$full_name', '$email', '$phone', '$address', '$price')";
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param('issisi', $user_id, $full_name, $email, $phone, $address, $price);
+
         if ($stmt->execute()) {
             $sql = "DELETE FROM basket WHERE user_id = $user_id";
 
