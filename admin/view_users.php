@@ -38,15 +38,13 @@ $result = $mysqli->query($sql);
 </head>
 <body>
 <header>
-    <a href="admin_logout.php">Logout</a>
-</header>
-<header>
     <div><a href="../main.php"><img class="logo" src="../img/logo.jpg"></a></div>
-    <a class="header-link-style" href="admin_dashboard.php"><h2>Admin Dashboard</h2></a>
+    <h2>Admin Panel</h2>
     <nav>
         <ul>
+            <li><a href="admin_dashboard.php">Dashboard</a></li>
             <li><a href="view_users.php">View Users</a></li>
-            <li><a href="add_product.php">Add New Product</a></li>
+            <li><a href="add_product.php">Add product</a></li>
             <li><a href="admin_logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -60,14 +58,20 @@ $result = $mysqli->query($sql);
             <tr>
                 <th>ID</th>
                 <th>Username</th>
+                <th style="white-space: nowrap">First Name</th>
+                <th style="white-space: nowrap">Last Name</th>
                 <th>Email</th>
+                <th>Phone</th>
                 <th>Action</th>
             </tr>
             <?php while ($row = $result->fetch_assoc()) { ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['username']; ?></td>
+                    <td><?php echo $row['first_name']; ?></td>
+                    <td><?php echo $row['second_name']; ?></td>
                     <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['phone']; ?></td>
                     <td>
                         <a href="delete_user.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                     </td>
@@ -76,9 +80,5 @@ $result = $mysqli->query($sql);
         </table>
     </div>
 </main>
-<footer class="footer">
-    <!-- Footer content goes here -->
-    <p>&copy; 2023 All rights reserved.</p>
-</footer>
 </body>
 </html>
