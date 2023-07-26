@@ -14,6 +14,10 @@ if (!isset($_SESSION['loggedin'])) {
     <title>Basket</title>
     <link rel="stylesheet" href="css/basket_style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -131,8 +135,9 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 </main>
-<footer>
-
+<footer class="footer">
+    <!-- Footer content goes here -->
+    <p>&copy; 2023 All rights reserved.</p>
 </footer>
 </body>
 </html>
