@@ -44,10 +44,12 @@ main {
 }
 
 .right_item {
+    min-width: min-content;
     /*float: right;*/
     width:  70%;
 }
 .top_right_item {
+    min-width: min-content;
     display: block;
     padding: 20px;
 
@@ -55,6 +57,7 @@ main {
 }
 
 .bottom_right_item {
+    min-width: min-content;
     display: block;
     padding: 20px;
 }
@@ -141,6 +144,7 @@ main {
 
 
 .item {
+    min-width: min-content;
     display: flex;
     /*display: inline-block;*/
     width: 50%;

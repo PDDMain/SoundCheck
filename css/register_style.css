@@ -62,7 +62,7 @@
 }
 
 .register form input[type="submit"]:hover {
-    background-color: grey;
+    background-color: #FF4386;
     transition: background-color 0.2s;
 }
 
