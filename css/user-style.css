@@ -107,6 +107,7 @@ main {
     overflow: hidden;
     width: 70%;
     margin-left: 20px;
+    padding-bottom: 15px;
 }
 .order-info{
     /*margin: 20px;*/
