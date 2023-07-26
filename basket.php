@@ -54,8 +54,7 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
 </header>
 
-
-<aside class="buy">
+<main>
     <?php
     $host = 'localhost';
     $username = 'root';
@@ -86,13 +85,6 @@ if (!isset($_SESSION['loggedin'])) {
             $price = $price + ($row['price'] * $row['count']);
         }
     }
-    echo '<p>Total (' . $items . ' items): <label class="all_price">' . $price . '$</label> </p>'
-    ?>
-    <a href="order.php"><input type="submit" src="order.php" value="Order"></a>
-</aside>
-
-<main>
-    <?php
     // Database connection details
 
     // Fetch the goods from the database that are in the user's basket
@@ -168,6 +160,12 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 </main>
+<aside class="buy">
+    <?php
+    echo '<p>Total (' . $items . ' items): <label class="all_price">' . $price . '$</label> </p>'
+    ?>
+    <a href="order.php"><input type="submit" src="order.php" value="Order"></a>
+</aside>
 <footer class="footer">
     <!-- Footer content goes here -->
     <p>&copy; 2023 All rights reserved.</p>
