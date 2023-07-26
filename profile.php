@@ -1,4 +1,19 @@
 <?php
+function addZeros($number) {
+    // Convert the number to a string
+    $number_str = strval($number);
+
+    // Calculate the number of zeros needed to reach a length of 6
+    $zeros_needed = 6 - strlen($number_str);
+
+    // Add zeros to the beginning of the string
+    for ($i = 0; $i < $zeros_needed; $i++) {
+        $number_str = '0' . $number_str;
+    }
+
+    return $number_str;
+}
+
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
 // If the user is not logged in redirect to the login page...
@@ -164,17 +179,50 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <div class="orders-info">
             <div class="orders-title">Order history</div>
-            <div class="order-info">
-                <div class="order-id">Order ID: 123456-7938</div>
-                <div class="order-date">Date: 12.03.2023</div>
-                <div class="order-price"> 12579$</div>
-            </div>
-            <hr>
-            <div class="order-info">
-                <div class="order-id">Order ID: 123456-7938</div>
-                <div class="order-date">Date: 12.03.2023</div>
-                <div class="order-price"> 10$</div>
-            </div>
+
+        <?php
+            $host = 'localhost';
+            $username = 'root';
+            $password = 'root';
+            $database = 'example';
+
+            // Create a new MySQLi object
+            $mysqli = new mysqli($host, $username, $password, $database);
+
+            // Check for connection errors
+            if ($mysqli->connect_errno) {
+                echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+                exit();
+            }
+
+            // Retrieve the user ID from the session
+            $user_id = $_SESSION['id'];
+            $query = "SELECT * FROM orders WHERE user_id = $user_id ORDER BY time DESC";
+
+            $result = $mysqli->query($query);
+
+            // Display the goods in the basket
+            if ($result->num_rows > 0) {
+                if ($row = $result->fetch_assoc()) {
+                    echo '<div class="order-info">';
+                    echo '<div class="order-id">Order ID: ' . addZeros($row['id']) . '</div>';
+                    echo '<div class="order-date">Date: ' . $row['time'] . '</div>';
+                    echo '<div class="order-price"> ' . $row['price'] . '$</div>';
+                    echo '</div>';
+                }
+                while ($row = $result->fetch_assoc()) {
+                    echo '<hr>';
+                    echo '<div class="order-info">';
+                    echo '<div class="order-id">Order ID: ' . addZeros($row['id']) . '</div>';
+                    echo '<div class="order-date">Date: ' . $row['time'] . '</div>';
+                    echo '<div class="order-price"> ' . $row['price'] . '$</div>';
+                    echo '</div>';
+                }
+            }
+
+            // Close the database connection
+            $mysqli->close();
+            ?>
         </div>
     </div>
 </main>
