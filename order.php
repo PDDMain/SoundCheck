@@ -61,7 +61,7 @@ function addZeros($number) {
 <body>
 <header>
     <div class="header-navigation">
-        <div><img class="logo" src="img/logo.jpg"></div>
+        <div><a href="first_page.php"><img class="logo" src="img/logo.jpg"></div></a>
         <div class="search-container">
             <div class="search">
                 <input type="text" placeholder="Search">
@@ -70,13 +70,13 @@ function addZeros($number) {
         </div>
         <nav>
             <ul>
-                <li><a href="#">
+                <li><a href="profile.php">
                         <div class="user-container">
                             <img class="user" src="img/user_icon.jpg">
                             <img class="user-hover" src="img/user_icon_hover.jpg">
                         </div>
                     </a></li>
-                <li><a href="#">
+                <li><a href="basket.php">
                         <div class="cart-container">
                             <img class="cart" src="img/shopping_cart_icon.jpg">
                             <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
