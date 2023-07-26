@@ -77,7 +77,8 @@
             echo '<div class="image_n_price">';
             echo '<div class="img_n_prc">';
             echo '<img src="' . $row['image_link'] . '" alt="Product Name">';
-            echo '<hr>';
+//             echo '<div class="price-label">Price</div>';
+//             echo '<hr>';
             echo '<div class="price">';
             echo '<div class="price-text">' . $row['price'] . '$</div>';
             echo '<button class="add-to-cart">Add to Cart</button>';
