@@ -38,15 +38,15 @@
         </nav>
     </div>
     <div class="header-cathegories">
-        <a class="cath" href="#">All</a>
-        <a class="cath" href="#">In-ear</a>
-        <a class="cath" href="#">Over-ear</a>
-        <a class="cath" href="#">Wireless</a>
+        <a class="cath" href="main.php?type=All">All</a>
+        <a class="cath" href="main.php?type=in-ear">In-ear</a>
+        <a class="cath" href="main.php?type=over-ear">Over-ear</a>
+        <a class="cath" href="main.php?type=wireless">Wireless</a>
     </div>
 </header>
 <main>
 
-    <a href="#">
+    <a href="main.php">
         <img class="welcome" src="img/welcome.jpg">
     </a>
 

@@ -104,3 +104,11 @@ body.loggedin {
     text-align: center;
     float: left;
 }
+
+.error {
+    background-color: white;
+    width: 90%;
+    height: 20px;
+    text-align: center;
+
+}

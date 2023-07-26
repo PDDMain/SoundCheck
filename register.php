@@ -11,9 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-
-
-
 <body>
 
 <header>
@@ -72,8 +69,13 @@
                 <i class="fas fa-lock"></i>
             </label>
             <input type="password" name="password" placeholder="Password" id="password" required>
-
-            <div class="error">incorrect password or username</div>
+            <?php
+//            // Display the login error message (if set) from the session
+            if (isset($_GET["error"])) {
+                echo '<div class="error">' . $_GET['error'] . '</div>';
+                unset($_SESSION['login_error']); // Clear the error message after displaying it
+            }
+            ?>
 
             <input type="submit" value="Add user">
         </form>

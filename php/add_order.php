@@ -3,7 +3,7 @@
 session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.html');
+    header('Location: login.php');
     exit;
 }
 
@@ -19,6 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Create a connection to the database
     $conn = new mysqli($servername, $username, $password, $dbname);
+
+    $query1 = "SELECT goods.price, basket.count FROM goods 
+              INNER JOIN basket ON goods.id = basket.good_id 
+              WHERE basket.user_id = $user_id";
+
+    $result1 = $conn->query($query1);
+    $items = 0;
+    $price = 0;
+    if ($result1->num_rows > 0) {
+        while ($row = $result1->fetch_assoc()) {
+            $items = $items + $row['count'];
+            $price = $price + ($row['price'] * $row['count']);
+        }
+    }
 
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];

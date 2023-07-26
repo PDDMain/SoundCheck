@@ -18,7 +18,7 @@ function addZeros($number) {
 session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.html');
+    header('Location: login.php');
     exit;
 }
 $DATABASE_HOST = 'localhost';
@@ -141,10 +141,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </nav>
     </div>
     <div class="header-cathegories">
-        <a class="cath" href="#">All</a>
-        <a class="cath" href="#">In-ear</a>
-        <a class="cath" href="#">Over-ear</a>
-        <a class="cath" href="#">Wireless</a>
+        <a class="cath" href="main.php?type=All">All</a>
+        <a class="cath" href="main.php?type=in-ear">In-ear</a>
+        <a class="cath" href="main.php?type=over-ear">Over-ear</a>
+        <a class="cath" href="main.php?type=wireless">Wireless</a>
     </div>
 </header>
 <div></div>
@@ -174,6 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                        value="<?php echo $phone; ?>">
                 <button type="submit" name="action" value="edit" class="edit">Confirm changes</button>
                 <button name="action" value="logout" class="logout">Log out</button>
+                <button name="action" value="logout" class="logout">Delete account</button>
             </form>
         </div>
 

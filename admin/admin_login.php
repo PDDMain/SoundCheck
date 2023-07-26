@@ -33,6 +33,8 @@
                 <i class="fas fa-lock"></i>
             </label>
             <input type="password" name="password" placeholder="Password" id="password" required>
+
+            <div class="error">incorrect password or username</div>
             <input type="submit" value="Login">
         </form>
     </div>
