@@ -5,7 +5,14 @@ session_start();
 if (!isset($_SESSION['loggedin'])) {
     header('Location: login.html');
     exit;
-} ?>
+}
+
+if (isset($_GET['type'])) {
+    $_SESSION['type'] = $_GET['type'];
+}
+if (empty($_SESSION['type'])) {
+    $_SESSION['type'] = 'All';
+}?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,10 +54,10 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
     </div>
     <div class="header-cathegories">
-        <a class="cath" href="#">All</a>
-        <a class="cath" href="#">In-ear</a>
-        <a class="cath" href="#">Over-ear</a>
-        <a class="cath" href="#">Wireless</a>
+        <a class="cath" href="#" <?php if ($_SESSION['type'] === 'All') { echo "style=\"color: red; \""; } ?>>All</a>
+        <a class="cath" href="#" <?php if ($_SESSION['type'] === 'in-ear') { echo "style=\"color: red; \""; } ?>>In-ear</a>
+        <a class="cath" href="#" <?php if ($_SESSION['type'] === 'over-ear') { echo "style=\"color: red; \""; } ?>>Over-ear</a>
+        <a class="cath" href="#" <?php if ($_SESSION['type'] === 'wireless') { echo "style=\"color: red; \""; } ?>>Wireless</a>
     </div>
 </header>
     <main>
@@ -128,9 +135,23 @@ if (!isset($_SESSION['loggedin'])) {
     // Prepare the query with filtering based on category and searching based on name
     $filter = "";
     $search = "";
+    if (isset($_GET['type'])) {
+        $_SESSION['type'] = $_GET['type'];
+    }
+    if (empty($_SESSION['type'])) {
+        $_SESSION['type'] = 'All';
+    }
+    if ($_SESSION['type'] !== 'All') {
+        $type = $mysqli->real_escape_string($_SESSION['type']);
+        $filter = "WHERE type = '$type'";
+    }
     if (isset($_GET['category']) && !empty($_GET['category'])) {
         $category = $mysqli->real_escape_string($_GET['category']);
-        $filter = "WHERE category = '$category'";
+        if ($filter === "") {
+            $filter = "WHERE color = '$category'";
+        } else {
+            $filter .= "AND color = '$category'";
+        }
     }
     if (isset($_GET['brand']) && !empty($_GET['brand'])) {
         $color = $mysqli->real_escape_string($_GET['brand']);
