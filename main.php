@@ -57,7 +57,7 @@ if (empty($_SESSION['type'])) {
         <a class="cath" href="main.php?type=All" <?php if ($_SESSION['type'] === 'All') { echo "style=\"color: #FF4386; \""; } ?>>All</a>
         <a class="cath" href="main.php?type=in-ear" <?php if ($_SESSION['type'] === 'in-ear') { echo "style=\"color: #FF4386; \""; } ?>>In-ear</a>
         <a class="cath" href="main.php?type=over-ear" <?php if ($_SESSION['type'] === 'over-ear') { echo "style=\"color: #FF4386; \""; } ?>>Over-ear</a>
-        <a class="cath" href=main.php?type=wireless" <?php if ($_SESSION['type'] === 'wireless') { echo "style=\"color: #FF4386; \""; } ?>>Wireless</a>
+        <a class="cath" href="main.php?type=wireless" <?php if ($_SESSION['type'] === 'wireless') { echo "style=\"color: #FF4386; \""; } ?>>Wireless</a>
     </div>
 </header>
     <main>
