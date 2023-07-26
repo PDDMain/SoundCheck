@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+.register {
+    width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 170px auto 50px auto;
+    border-radius: 12px;
+}
+
+.register h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+
+.register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+
+.register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: black;
+    color: #ffffff;
+}
+
+.register form input[type="password"], .register form input[type="text"] {
+    width: 400px;
+    height: 55px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+.register form input[type="password"] {
+
+    margin-bottom: 20px;
+}
+
+.register form input[type="submit"] {
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: black;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.register form input[type="submit"]:hover {
+    background-color: #FF4386;
+    transition: background-color 0.2s;
+}
+
+
+body.loggedin {
+    background-color: #f3f4f7;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #e0e0e3;
+    color: #4a536e;
+}
+
+.content > p, .content > div {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    margin: 25px 0;
+    padding: 25px;
+    background-color: #fff;
+}
+
+.content > p table td, .content > div table td {
+    padding: 5px;
+}
+
+.content > p table td:first-child, .content > div table td:first-child {
+    font-weight: bold;
+    color: #4a536e;
+    padding-right: 15px;
+}
+
+.content > div p {
+    padding: 5px;
+    margin: 0 0 10px 0;
+}
+
+body {
+    background: url("../img/background-default.jpg") no-repeat fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.filters {
+    background-color: white;
+    width: 18%;
+    height: 100%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 10%;
+    padding-top: 60%;
+    text-align: left;
+
+}
+
+main {
+    /*background-image: url("img/background-default.jpg");*/
+    background-size: cover;
+}
+
+.product {
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.error {
+    background-color: white;
+    width: 90%;
+    height: 20px;
+    text-align: center;
+
+}

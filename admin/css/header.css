@@ -1,0 +1,168 @@
+header {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+    top: 0;
+}
+
+.logo {
+    padding-left: 20px;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.user-hover {
+    position: absolute;
+    width: 45px;
+    opacity: 0;
+}
+
+.user-hover:hover {
+    opacity: 1;
+}
+
+.user {
+    opacity: 1;
+    width: 45px;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.cart-hover {
+    position: absolute;
+    width: 45px;
+    opacity: 0;
+}
+
+.cart-hover:hover {
+    opacity: 1;
+}
+
+.cart{
+    /*position: absolute;*/
+    width: 45px;
+}
+
+.search-container {
+    padding-left: 5%;
+    flex: 100%;
+    display: flex;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    /*position: absolute;*/
+    width: 50%;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 20px 0 0 20px;
+    padding: 8px;
+    font-size: 17px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+.search-button {
+    width: 10%;
+    margin-right: 5%;
+    padding: 8px;
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 0 20px 20px 0;
+    font-size: 17px;
+}
+.search-button:hover{
+    background-color: #FF4386;
+    border: 1px solid #FF4386;
+}
+
+body{
+    margin: 0;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li a {
+    font-size: 18px;
+}
+
+nav ul li a {
+    font-family: 'Quicksand', sans-serif;
+    margin: 20px;
+    font-size: 22px;
+}
+
+nav ul li a:hover, .header-link-style:hover {
+    color: #FF4386;
+}
+
+.header-link-style {
+    color: white; /* Устанавливаем цвет ссылки (может быть изменен на нужный вам) */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    /* Дополнительные стили по желанию */
+    font-weight: bold; /* Например, делаем текст жирным */
+    font-size: 16px; /* Например, устанавливаем размер шрифта */
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+body {
+    background: url("../../img/background-default.jpg") no-repeat fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}

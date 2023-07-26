@@ -1,0 +1,152 @@
+.header-navigation {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+    top: 0;
+}
+
+.logo {
+    padding-left: 20px;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.user-hover {
+    position: absolute;
+    width: 45px;
+    opacity: 0;
+}
+
+.user-hover:hover {
+    opacity: 1;
+}
+
+.user {
+    opacity: 1;
+    width: 45px;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.cart-hover {
+    position: absolute;
+    width: 45px;
+    opacity: 0;
+}
+
+.cart-hover:hover {
+    opacity: 1;
+}
+
+.cart{
+    /*position: absolute;*/
+    width: 45px;
+}
+
+.search-container {
+    padding-left: 5%;
+    flex: 100%;
+    display: flex;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    /*position: absolute;*/
+    width: 50%;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 20px 0 0 20px;
+    padding: 8px;
+    font-size: 17px;
+    background-color: white;
+    color: #333;
+}
+.search-button {
+    margin-right: 5%;
+    padding: 8px 20px 8px 20px;
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 0 20px 20px 0;
+    font-size: 17px;
+}
+.search-button:hover{
+    background-color: #FF4386;
+    border: 1px solid #FF4386;
+    cursor: pointer;
+}
+
+body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+::placeholder {
+    font-family: 'Quicksand', sans-serif;
+}
+button {
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.header-cathegories {
+    margin-top: auto;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 105px 0 10px 0;
+}
+
+.cath {
+    width: 25%;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: 5px;
+}
+.cath:hover{
+    color: #FF4386;
+}

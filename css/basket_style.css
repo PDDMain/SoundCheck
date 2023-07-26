@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    /*font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;*/
+    font-size: 16px;
+}
+
+
+body {
+    background: url("../img/background-default.jpg") no-repeat fixed;
+    background-size: cover;
+
+    margin: 0;
+}
+
+.buy {
+    margin-left: 40px;
+    min-width: max-content;
+    background-color: white;
+    width: 25%;
+    height: min-content;
+    /*height: 700px;*/
+    float: right;
+    right: 5%;
+    /*margin-top: 40px;*/
+    margin-right: 4%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-bottom: 20px;
+    text-align: left;
+    /*background-color: aqua;*/
+}
+
+main {
+    margin-top: 40px;
+    display: flex;
+    /*background-color: brown;*/
+}
+
+
+.product {
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.right_item {
+    min-width: max-content;
+    /*float: right;*/
+    width: 70%;
+    display: grid;
+}
+
+.top_right_item {
+    min-width: min-content;
+    float: right;
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+
+.bottom_right_item {
+    min-width: min-content;
+    display: flex;
+    height: 100%;
+
+}
+
+.plus_button {
+    width: 37px;
+    float: right;
+    padding: 8px;
+    height: 37px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.plus_button:hover {
+    cursor: pointer;
+    background-color: #FF4386;
+    transition: background-color 0.2s;
+}
+
+.amount_of_item {
+    text-align: center;
+    width: 37px;
+    height: 37px;
+    float: right;
+    padding: 8px;
+    background-color: black;
+    color: white;
+}
+
+.minus_button {
+    width: 37px;
+    height: 37px;
+    float: right;
+    padding: 8px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    border-top-left-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+
+.minus_button:hover {
+    cursor: pointer;
+    background-color: #FF4386;
+    transition: background-color 0.2s;
+}
+
+.price_of_item {
+    font-size: 26px;
+}
+
+.name {
+    font-size: 22px;
+    float: left;
+    /*background-color: #4a536e;*/
+}
+
+.name_div  {
+    float: left;
+    min-width: min-content;
+    height: 100%;
+    width: 70%;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.delete_div {
+    min-width: min-content;
+    float: right;
+    height: 100%;
+    width: 30%;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-left: 10px;
+
+}
+
+.delete_button {
+    /*right: 0;*/
+    /*width: 120px;*/
+    /*height: 80%;*/
+    float: right;
+    width: 111px;
+    height: 35px;
+    min-width: min-content;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: #676767;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.delete_button:hover {
+    cursor: pointer;
+    background-color: #FF4386;
+    transition: background-color 0.2s;
+}
+
+
+.price_div {
+    min-width: min-content;
+    width: 70%;
+    height: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+.left_item {
+
+    min-width: 160px;
+    width: 30%;
+}
+
+
+.item {
+    min-width: max-content;
+
+    display: flex;
+    /*display: inline-block;*/
+    width: 80%;
+    height: 170px;
+    /*padding-top: 14px;*/
+    background-color: white;
+    margin-left: 7%;
+    margin-bottom: 30px;
+    /*float: left;*/
+}
+
+.buy input[type="submit"] {
+    width: 100%;
+    /*height: 60px;*/
+    padding: 15px;
+    /*margin-top: 20px;*/
+    background-color: black;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.buy input[type="submit"]:hover {
+    background-color: #FF4386;
+    transition: background-color 0.2s;
+}
+
+.buy p {
+    /*font-weight: 500;*/
+    font-size: 25px;
+}
+
+
+.all_price {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.amount_div {
+    width: 30%;
+    min-width: min-content;
+}
+
+.change_amount {
+    min-width: min-content;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 10px;
+    float: right;
+    display: flex;
+}
+
+.items {
+    min-width: max-content;
+    padding-left: 8%;
+    /*background-color: darkturquoise;*/
+    width: 75%;
+    float: left;
+}
