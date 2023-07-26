@@ -110,8 +110,8 @@ main {
     display: inline-table;
     width: 27%;
     background-color: white;
-    margin-left: 50px;
-    margin-bottom: 67px;
+    margin-left: 40px;
+    margin-bottom: 40px;
     text-align: center;
     /*float: left;*/
 }
@@ -122,13 +122,13 @@ main {
 }
 
  .buy_button{
-    width:50%;
+    width:120px;
      height: 40px;
     /*margin-right: 5%;*/
     /*padding: 20px 10%;*/
     padding: 10px;
     margin: 10px;
-    float: right;
+    /*float: right;*/
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     background-color: black;

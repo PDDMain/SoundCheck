@@ -50,6 +50,13 @@
     border-top-right-radius: 10px;
 }
 
+
+
+.register form input[type="password"] {
+
+    margin-bottom: 20px;
+}
+
 .register form input[type="submit"] {
     width: 100%;
     height: 60px;
@@ -143,13 +150,11 @@ main {
     margin-bottom: 5%;
 }
 
-.square {
-    display: inline-block;
-    width: 20%;
-    height: 40%;
+
+.error {
     background-color: white;
-    margin-left: 4%;
-    margin-top: 10%;
+    width: 90%;
+    height: 20px;
     text-align: center;
-    float: left;
+
 }
