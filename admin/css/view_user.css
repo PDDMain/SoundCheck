@@ -38,11 +38,12 @@ nav ul li a:hover {
 
 .user-list {
     text-align: center;
+    margin-top: 50px;
 }
 
 .user-list h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 table {
@@ -57,6 +58,7 @@ table {
 th, td {
     padding: 10px;
     border: 1px solid #ccc;
+    font-size: 24px;
 }
 
 th {

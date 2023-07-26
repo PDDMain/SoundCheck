@@ -19,15 +19,13 @@ if (!isset($_SESSION['admin_logged_in'])) {
 </head>
 <body>
 <header>
-    <a href="admin_logout.php">Logout</a>
-</header>
-<header>
     <div><a href="../main.php"><img class="logo" src="../img/logo.jpg"></a></div>
-    <a class="header-link-style" href="admin_dashboard.php"><h2>Admin Dashboard</h2></a>
+    <h2>Admin Panel</h2>
     <nav>
         <ul>
+            <li><a href="admin_dashboard.php">Dashboard</a></li>
             <li><a href="view_users.php">View Users</a></li>
-            <li><a href="add_product.php">Add New Product</a></li>
+            <li><a href="add_product.php">Add product</a></li>
             <li><a href="admin_logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -45,9 +43,5 @@ if (!isset($_SESSION['admin_logged_in'])) {
         </ul>
     </div>
 </main>
-<footer class="footer">
-    <!-- Footer content goes here -->
-    <p>&copy; 2023 All rights reserved.</p>
-</footer>
 </body>
 </html>
