@@ -1,68 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="css/first_page_style.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" rel="stylesheet" href="css/header.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/first_page_style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" rel="stylesheet" href="css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-  <div class="header-navigation">
-  <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
-  <div class="search-container">
-    <form class="search" action="main.php" method="get">
-      <input type="text" name="search" placeholder="Search">
-      <button type="submit" class="search-button">Search</button>
-    </form>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#">
-        <div class="user-container">
-          <img class="user" src="img/user_icon.jpg">
-          <img class="user-hover" src="img/user_icon_hover.jpg">
+    <div class="header-navigation">
+        <div><a href="main.php"><img class="logo" src="img/logo.jpg"></a></div>
+        <div class="search-container">
+            <form class="search" action="main.php" method="get">
+                <input type="text" name="search" placeholder="Search">
+                <button type="submit" class="search-button">Search</button>
+            </form>
         </div>
-      </a></li>
-      <li><a href="#">
-        <div class="cart-container">
-          <img class="cart" src="img/shopping_cart_icon.jpg">
-          <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
-        </div>
-      </a></li>
-    </ul>
-  </nav>
-</div>
-  <div class="header-cathegories">
-    <a class="cath" href="#">All</a>
-    <a class="cath" href="#">In-ear</a>
-    <a class="cath" href="#">Over-ear</a>
-    <a class="cath" href="#">Wireless</a>
-  </div>
+        <nav>
+            <ul>
+                <li><a href="#">
+                    <div class="user-container">
+                        <img class="user" src="img/user_icon.jpg">
+                        <img class="user-hover" src="img/user_icon_hover.jpg">
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="cart-container">
+                        <img class="cart" src="img/shopping_cart_icon.jpg">
+                        <img class="cart-hover" src="img/shopping_cart_icon_hover.jpg">
+                    </div>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-cathegories">
+        <a class="cath" href="#">All</a>
+        <a class="cath" href="#">In-ear</a>
+        <a class="cath" href="#">Over-ear</a>
+        <a class="cath" href="#">Wireless</a>
+    </div>
 </header>
 <main>
 
+    <a href="#">
+        <img class="welcome" src="img/welcome.jpg">
+    </a>
+
+    <form class="review_form">
+        <label for="new_review" class="leave_review">Leave your review here</label><br>
+        <textarea id="new_review" name="review" rows="8" cols="50"></textarea><br>
+        <input class="send_review" type="submit" value="Send">
+    </form>
 
 
-  <img class="welcome" src="img/welcome.jpg">
+    <div class="review_info">
+        <div class="userid">
+        <h2> user1 </h2>
+            <label class="info"> 12.08.2022 13:22</label>
+        </div>
+        <hr>
+        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec odio
+            ornare, tempor libero nec, mollis nunc. Vivamus lacinia laoreet metus. Interdum et malesuada fames ac ante
+            ipsum primis in faucibus. Ut fringilla eros sed vulputate maximus. Nulla id leo quis purus commodo accumsan.
+            Donec finibus semper vulputate. Curabitur urna odio, elementum a bibendum vitae, mattis id erat. Fusce
+            mattis neque sit amet condimentum convallis. Vivamus vitae purus gravida, interdum augue a, porttitor
+            lectus. Phasellus sed leo tellus.
 
-  <button> Start shopping</button>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+            Mauris pharetra interdum dictum. Proin sed purus vel diam mollis semper a at sapien. Pellentesque habitant
+            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia curae; Fusce facilisis, elit ut faucibus rhoncus, orci
+            sapien facilisis turpis, sit amet placerat lectus mi non tellus. Nunc molestie vitae enim vitae viverra.
+            Etiam mollis ligula est. Sed varius congue commodo. Etiam congue elit ligula, quis tristique nunc bibendum
+            vel.</p>
+    </div>
+
+
+    <div class="review_info">
+        <h2 class="userid"> user1 </h2>
+        <label class="info"> 03.11.2020 21:18</label>
+        <hr>
+        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec odio
+            ornare, tempor libero nec, mollis nunc. Vivamus lacinia laoreet metus. Interdum et malesuada fames ac ante
+            ipsum primis in faucibus. Ut fringilla eros sed vulputate maximus. Nulla id leo quis purus commodo accumsan.
+            Donec finibus semper vulputate. Curabitur urna odio, elementum a bibendum vitae, mattis id erat. Fusce
+            mattis neque sit amet condimentum convallis. Vivamus vitae purus gravida, interdum augue a, porttitor
+            lectus. Phasellus sed leo tellus.
+
+            Mauris pharetra interdum dictum. Proin sed purus vel diam mollis semper a at sapien. Pellentesque habitant
+            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia curae; Fusce facilisis, elit ut faucibus rhoncus, orci
+            sapien facilisis turpis, sit amet placerat lectus mi non tellus. Nunc molestie vitae enim vitae viverra.
+            Etiam mollis ligula est. Sed varius congue commodo. Etiam congue elit ligula, quis tristique nunc bibendum
+            vel.</p>
+    </div>
 
 </main>
 <footer class="footer">
-  <!-- Footer content goes here -->
-  <p>&copy; 2023 All rights reserved.</p>
+    <!-- Footer content goes here -->
+    <p>&copy; 2023 All rights reserved.</p>
 </footer>
 </body>
 </html>

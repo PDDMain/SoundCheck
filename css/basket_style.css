@@ -36,15 +36,20 @@ main {
 
 .product {
     width: 90%;
+    height: 90%;
+
+    object-fit: contain;
     margin-top: 5%;
     margin-left: 5%;
 }
 
 .right_item {
+    min-width: min-content;
     /*float: right;*/
     width:  70%;
 }
 .top_right_item {
+    min-width: min-content;
     display: block;
     padding: 20px;
 
@@ -52,6 +57,7 @@ main {
 }
 
 .bottom_right_item {
+    min-width: min-content;
     display: block;
     padding: 20px;
 }
@@ -102,7 +108,9 @@ main {
     font-size: 26px;
 }
 .name {
-    font-size: 36px;
+    font-size: 26px;
+    /*background-color: #4a536e;*/
+
 }
 
 .delete_button {
@@ -136,6 +144,7 @@ main {
 
 
 .item {
+    min-width: min-content;
     display: flex;
     /*display: inline-block;*/
     width: 50%;
