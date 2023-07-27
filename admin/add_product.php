@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <option value="White">White</option>
             <option value="Red">Red</option>
             <option value="Blue">Blue</option>
-            <option value="Purple">Purle</option>
+            <option value="Purple">Purple</option>
         </select>
         <input type="submit" value="Add Product">
     </form>
