@@ -71,9 +71,13 @@ if (empty($_SESSION['type'])) {
             <br>
             <input class="filters_checkbox" type="checkbox" name="category" value="Apple"> Apple
             <br>
+            <input class="filters_checkbox" type="checkbox" name="category" value="Sony"> Sony
+            <br>
             <input class="filters_checkbox" type="checkbox" name="category" value="Xiaomi"> Xiaomi
             <br>
             <input class="filters_checkbox" type="checkbox" name="category" value="JVC"> JVC
+            <br>
+            <input class="filters_checkbox" type="checkbox" name="category" value="JBL"> JBL
             <br>
             <input class="filters_checkbox" type="checkbox" name="category" value="Meze"> Meze
             <br>
@@ -92,7 +96,9 @@ if (empty($_SESSION['type'])) {
                 <option value="">Select a color</option>
                 <option value="Black">Black</option>
                 <option value="White">White</option>
+                <option value="Red">Red</option>
                 <option value="Blue">Blue</option>
+                <option value="Purle">Purle</option>
                 <!-- Add more brands as needed -->
             </select>
             <input type="submit" id="filter_button" value="Filter">
@@ -148,9 +154,9 @@ if (empty($_SESSION['type'])) {
     if (isset($_GET['category']) && !empty($_GET['category'])) {
         $category = $mysqli->real_escape_string($_GET['category']);
         if ($filter === "") {
-            $filter = "WHERE color = '$category'";
+            $filter = "WHERE category = '$category'";
         } else {
-            $filter .= "AND color = '$category'";
+            $filter .= "AND category = '$category'";
         }
     }
     if (isset($_GET['brand']) && !empty($_GET['brand'])) {

@@ -110,14 +110,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <select name="brand" id="brand">
             <option value="Apple">Apple</option>
             <option value="Samsung">Samsung</option>
+            <option value="Sony">Sony</option>
+            <option value="Xiaomi">Xiaomi</option>
             <option value="JVC">JVC</option>
+            <option value="JBL">JBL</option>
             <option value="MEZE">MEZE</option>
+            <option value="Sennheiser">Sennheiser</option>
         </select>
         <label for="brand">Color:</label>
         <select name="color" id="color">
             <option value="Black">Black</option>
             <option value="White">White</option>
             <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Purple">Purle</option>
         </select>
         <input type="submit" value="Add Product">
     </form>
