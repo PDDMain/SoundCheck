@@ -86,10 +86,11 @@ if (!isset($_SESSION['loggedin'])) {
             echo '<div class="image_n_price">';
             echo '<div class="img_n_prc">';
             echo '<img src="' . $row['image_link'] . '" alt="Product Name">';
-            echo '<div class="price">';
+            echo '<form action="php/add_to_basket1.php" method="post" class="price">';
+            echo '<input type="hidden" name="good_id" value="' . $row['id'] . '">';
             echo '<div class="price-text">' . $row['price'] . '$</div>';
-            echo '<button class="add-to-cart">Add to Cart</button>';
-            echo '</div>';
+            echo '<button type="submit" class="add-to-cart">Add to Cart</button>';
+            echo '</form>';
             echo '</div>';
             echo '</div>';
             echo '<div class="product-info">';
