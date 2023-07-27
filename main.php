@@ -98,7 +98,7 @@ if (empty($_SESSION['type'])) {
                 <option value="White">White</option>
                 <option value="Red">Red</option>
                 <option value="Blue">Blue</option>
-                <option value="Purle">Purle</option>
+                <option value="Purple">Purple</option>
                 <!-- Add more brands as needed -->
             </select>
             <input type="submit" id="filter_button" value="Filter">
